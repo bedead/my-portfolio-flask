@@ -90,6 +90,29 @@
             transform: scale(0);
         }
     }
+    
+    .slide-up-anim {
+        visibility: visible;
+        animation: slide 1s;
+    }
+    
+    .slide-up-anim::after {
+        /* useful when its child elements are float:left; */
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
 
 
@@ -122,8 +145,8 @@
         </div>
 
 
-        <div class="px-4 py-2 my-3 text-center" style="color: whitesmoke;">
-            <img class="d-block mx-auto mb-4" src="/static/effect-img.gif" alt="My-image" style="max-width: 250px; max-height: 250px; max-width: none;">
+        <div class="px-4 py-2 my-3 text-center anim" style="color: whitesmoke;">
+            <img class="d-block mx-auto mb-4 anim" src="/static/effect-img.gif" alt="My-image" style="max-width: 250px; max-height: 250px; max-width: none;">
             <h1 class="display-4 fw-bold">Satyam Mihsra</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-1">I am a first year student perusing my <strong>B.Tech in Computer Science.</strong></p>
@@ -131,7 +154,7 @@
                 <p class="lead mb-1">Member of <strong>CSI Chapter</strong>(Computer society of India).</p>
                 <p class="lead mb-4">Member of <strong>IAAA</strong>(International Amateur Astronomical Association).</p>
                 <h3 class="display-5 fw-bold">Interests</h3>
-                <div class="gap-2d-sm-flex justify-content-center mb-4">
+                <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
 
                     <span class="badge rounded-pill bg-light text-black">Sketching</span>
                     <span class="badge rounded-pill bg-light text-black">Fitness</span>
@@ -147,7 +170,7 @@
                 </div>
 
                 <h3 class="display-5 fw-bold">Skills</h3>
-                <div class="gap-2d-sm-flex justify-content-center mb-4">
+                <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
 
                     <span class="badge rounded-pill bg-black text-white">Python</span>
                     <span class="badge rounded-pill bg-black text-white">Bootstrap</span>
@@ -180,7 +203,7 @@
 
 
         <!-- Footer -->
-        <footer class="page-footer font-small indigo" style="background: color #212121;">
+        <footer class="page-footer font-small indigo anim" style="background: color #212121;">
 
             <!-- Footer Links -->
             <div class="container text-white">
@@ -245,19 +268,19 @@
 
                                 <!-- Github link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="https://github.com/bedead">
                                         <img src="static/universal-elements/github-dark.svg">
                                     </a>
                                 </li>
                                 <!-- Gmail link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="mailto:satyam.work.only@gmail.com">
                                         <img src="static/universal-elements/gmail-dark.svg">
                                     </a>
                                 </li>
                                 <!-- Linkedin link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="https://www.linkedin.com/in/satyam-mishra-019bab225">
                                         <img src="static/universal-elements/linkedin-dark.svg">
                                     </a>
                                 </li>
@@ -329,6 +352,20 @@
             }
         }, 300);
     }
+
+    const images = document.querySelectorAll('.anim');
+
+    observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                entry.target.classList.add('slide-up-anim');
+            }
+        });
+    });
+
+    images.forEach(image => {
+        observer.observe(image);
+    });
 </script>
 
 <!-- Optional JavaScript; choose one of the two! -->

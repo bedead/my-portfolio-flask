@@ -90,6 +90,73 @@
             transform: scale(0);
         }
     }
+    /* satyam floating anim */
+    
+    #float-anim {
+        animation: animationname 2s linear infinite;
+        /*animation: animation-name animation-duration animation-direction animation-iteration-count */
+        transition: .5s ease-in-out;
+    }
+    
+    @keyframes animationname {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(-0px);
+        }
+    }
+    
+    #slide-up-anim {
+        animation: animationname 2s linear infinite;
+        /*animation: animation-name animation-duration animation-direction animation-iteration-count */
+        transition: .5s ease-in-out;
+    }
+    
+    @keyframes animationname {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(-0px);
+        }
+    }
+    /* scroll slide up animations */
+    
+    .slide-up-anim {
+        visibility: hidden;
+        visibility: visible\9;
+        /*For old IE browsers IE6-8 */
+    }
+    
+    .slide-up-anim {
+        visibility: visible;
+        animation: slide 1s;
+    }
+    
+    .slide-up-anim::after {
+        /* useful when its child elements are float:left; */
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
 
 
@@ -121,7 +188,7 @@
 
 
 
-                <div class="container my-lg-5 py-2">
+                <div class="container my-lg-5 py-2 anim">
                     {% for message in get_flashed_messages() %}
                     <div class="container-fluid p-lg-0 p-md-2 py-sm-3">
                         <div class="alert alert-success alert-dismissible" role="alert">
@@ -150,7 +217,7 @@
                                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 my-lg-5 py-lg-5">
 
                                                     <br>
-                                                    <h1>Hey, I am
+                                                    <h1 id="float-anim">Hey, I am
                                                         <Strong style="color:burlywood;">Satyam Mishra</Strong>.
                                                     </h1>
                                                     <br>
@@ -179,7 +246,7 @@
 
 
         <!-- Footer -->
-        <footer class="page-footer font-small indigo">
+        <footer class="page-footer font-small indigo anim">
 
             <!-- Footer Links -->
             <div class="container text-white">
@@ -244,19 +311,19 @@
 
                                 <!-- Github link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="https://github.com/bedead">
                                         <img src="static/universal-elements/github-dark.svg">
                                     </a>
                                 </li>
                                 <!-- Gmail link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="mailto:satyam.work.only@gmail.com">
                                         <img src="static/universal-elements/gmail-dark.svg">
                                     </a>
                                 </li>
                                 <!-- Linkedin link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="https://www.linkedin.com/in/satyam-mishra-019bab225">
                                         <img src='/static/universal-elements/linkedin-dark.svg'>
                                     </a>
                                 </li>
@@ -329,6 +396,22 @@
             }
         }, 300);
     }
+
+
+
+    const images = document.querySelectorAll('.anim');
+
+    observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                entry.target.classList.add('slide-up-anim');
+            }
+        });
+    });
+
+    images.forEach(image => {
+        observer.observe(image);
+    });
 </script>
 
 

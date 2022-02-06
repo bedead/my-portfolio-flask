@@ -91,6 +91,29 @@
             transform: scale(0);
         }
     }
+    
+    .slide-up-anim {
+        visibility: visible;
+        animation: slide 1s;
+    }
+    
+    .slide-up-anim::after {
+        /* useful when its child elements are float:left; */
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
 
 
@@ -126,7 +149,7 @@
 
 
         <!-- uncoming - projects data/showcase-->
-        <div class="container p-lg-3 py-2">
+        <div class="container p-lg-3 py-2 anim">
 
             <h2 class="display-3 fw-bold text-center text-white">Upcoming projects</h2>
 
@@ -187,7 +210,7 @@
 
         <!--Current projects-->
         <div class="container p-2">
-            <div class="px-4 pt-5 my-5 text-center border-bottom shadow" style="color: whitesmoke;">
+            <div class="px-4 pt-5 my-5 text-center border-bottom shadow anim" style="color: whitesmoke;">
                 <h1 class="display-1 fw-bold">Current projects</h1>
                 <br>
                 <br>
@@ -207,7 +230,7 @@
                 </div>
             </div>
 
-            <div class="px-4 pt-5 my-5 text-center border-bottom shadow" style="color: whitesmoke;">
+            <div class="px-4 pt-5 my-5 text-center border-bottom shadow anim" style="color: whitesmoke;">
                 <h3 class="display-5 fw-bold">Shape out - Platformer Game</h3>
                 <div class="col-lg-6 mx-auto">
                     <p class="lead mb-4">This was a project which acquired lot of investment in terms of time, and it turned out to be most successful among all. I developed this game named Shape Out using a Game developed Engine named Godat Engine.
@@ -224,7 +247,7 @@
                 </div>
             </div>
 
-            <div class="px-4 pt-5 my-5 text-center border-bottom shadow" style="color: whitesmoke;">
+            <div class="px-4 pt-5 my-5 text-center border-bottom shadow anim" style="color: whitesmoke;">
                 <h3 class="display-5 fw-bold">Simple Calculator</h3>
                 <div class="col-lg-6 mx-auto">
                     <p class="lead mb-4">I created this Simple Calculator android application using python kivy md library. This Android app was of about 20mb. It was a general Use calcualtor with multipliction, division, addition, and substraction.
@@ -242,7 +265,7 @@
                 </div>
             </div>
 
-            <div class="px-4 pt-5 my-5 text-center border-bottom shadow" style="color: whitesmoke;">
+            <div class="px-4 pt-5 my-5 text-center border-bottom shadow anim" style="color: whitesmoke;">
                 <h3 class="display-5 fw-bold">Translation App</h3>
                 <div class="col-lg-6 mx-auto">
                     <p class="lead mb-4">I created this Translation android application using python kivy md library. This App used Google api to convert one language data to another. It was a fully developed appliction, but due to some technical reason I could'nt deploy
@@ -263,7 +286,7 @@
             </div>
 
 
-            <div class="px-4 pt-5 my-5 text-center border-bottom shadow" style="color: whitesmoke;">
+            <div class="px-4 pt-5 my-5 text-center border-bottom shadow anim" style="color: whitesmoke;">
                 <h3 class="display-5 fw-bold">This Website</h3>
                 <div class="col-lg-6 mx-auto">
                     <p class="lead mb-4">This is a full stack website which I created in less then 1 week. The backend is handles by Django. It has inbuild SQl database.
@@ -287,7 +310,7 @@
         <hr>
 
         <!-- Footer -->
-        <footer class="page-footer font-small indigo" style="background: color #212121;">
+        <footer class="page-footer font-small indigo anim" style="background: color #212121;">
 
             <!-- Footer Links -->
             <div class="container text-white">
@@ -352,19 +375,19 @@
 
                                 <!-- Github link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="https://github.com/bedead">
                                         <img src="/static/universal-elements/github-dark.svg">
                                     </a>
                                 </li>
                                 <!-- Gmail link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="mailto:satyam.work.only@gmail.com">
                                         <img src="/static/universal-elements/gmail-dark.svg">
                                     </a>
                                 </li>
                                 <!-- Linkedin link-->
                                 <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="#">
+                                    <a class="btn-floating btn-fb mx-1" href="https://www.linkedin.com/in/satyam-mishra-019bab225">
                                         <img src="/static/universal-elements/linkedin-dark.svg">
                                     </a>
                                 </li>
@@ -437,6 +460,20 @@
             }
         }, 300);
     }
+
+    const images = document.querySelectorAll('.anim');
+
+    observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                entry.target.classList.add('slide-up-anim');
+            }
+        });
+    });
+
+    images.forEach(image => {
+        observer.observe(image);
+    });
 </script>
 
 <!-- Optional JavaScript; choose one of the two! -->
