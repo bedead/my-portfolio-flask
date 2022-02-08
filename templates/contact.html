@@ -113,6 +113,41 @@
             transform: translateY(0);
         }
     }
+    /*  button shake animation */
+    
+    .shake-anim:hover {
+        animation-name: shakeAnim;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        position: relative;
+    }
+    
+    @keyframes shakeAnim {
+        0% {
+            left: 0
+        }
+        1% {
+            left: -3px
+        }
+        2% {
+            left: 5px
+        }
+        3% {
+            left: -8px
+        }
+        4% {
+            left: 8px
+        }
+        5% {
+            left: -5px
+        }
+        6% {
+            left: 3px
+        }
+        7% {
+            left: 0
+        }
+    }
 </style>
 
 
@@ -128,16 +163,16 @@
                         <h3 class="float-md-start mb-0 text-white">Satyam Mishra</h3>
                         <nav class="nav nav-pills bg-dark rounded-3 justify-content-center float-md-end">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="/">Home</a>
+                                <a class="nav-link text-white shadow shake-anim" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="projects">Projects</a>
+                                <a class="nav-link text-white shadow shake-anim" href="projects">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="about">About</a>
+                                <a class="nav-link text-white shadow shake-anim" href="about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a style="background-color: #FFCC22;" class="nav-link active text-white" aria-current="page" href="contact">Contact</a>
+                                <a style="background-color: #FFCC22;" class="nav-link active text-white shadow shake-anim" aria-current="page" href="contact">Contact</a>
                             </li>
                         </nav>
                     </div>
@@ -160,31 +195,30 @@
                     <form class="justify-content-center p-lg-5" method="post" action="/contact" role="form">
                         <!-- Name input -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="form4Example1" name="name" class="form-control" placeholder="Enter your Name or Subject" />
+                            <input type="text" id="form4Example1" name="name" class="form-control shake-anim" placeholder="Enter your Name or Subject" />
 
                         </div>
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="form4Example2" name="email" class="form-control" placeholder="Enter your Email address" />
+                            <input type="email" id="form4Example2" name="email" class="form-control shake-anim" placeholder="Enter your Email address" />
 
                         </div>
 
                         <!-- Message input -->
                         <div class="form-outline mb-4">
-                            <textarea class="form-control" id="form4Example3" name="msg" rows="4" placeholder="Enter the messege!"></textarea>
+                            <textarea class="form-control shake-anim" id="form4Example3" name="msg" rows="4" placeholder="Enter the messege!"></textarea>
 
                         </div>
 
 
                         <!-- Submit button -->
-                        <button style="background-color: #FFCC22;" type="submit" class="btn btn-outline-dark mb-4 px-5">Submit</button>
+                        <button style="background-color: #FFCC22;" type="submit" class="btn btn-outline-dark mb-4 px-5 shake-anim">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
 
-        <hr>
 
         <!-- Footer -->
         <footer class="page-footer font-small indigo anim" style="background: color #212121;">

@@ -113,6 +113,41 @@
             transform: translateY(0);
         }
     }
+    /*  button shake animation */
+    
+    .shake-anim:hover {
+        animation-name: shakeAnim;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        position: relative;
+    }
+    
+    @keyframes shakeAnim {
+        0% {
+            left: 0
+        }
+        1% {
+            left: -3px
+        }
+        2% {
+            left: 5px
+        }
+        3% {
+            left: -8px
+        }
+        4% {
+            left: 8px
+        }
+        5% {
+            left: -5px
+        }
+        6% {
+            left: 3px
+        }
+        7% {
+            left: 0
+        }
+    }
 </style>
 
 
@@ -127,16 +162,16 @@
                         <h3 class="float-md-start mb-0 text-white">Satyam Mishra</h3>
                         <nav class="nav nav-pills bg-dark rounded-3 justify-content-center float-md-end">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="/">Home</a>
+                                <a class="nav-link text-white shadow shake-anim" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="projects">Projects</a>
+                                <a class="nav-link text-white shadow shake-anim" href="projects">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a style="background-color: #FFCC22;" class="nav-link active text-white" aria-current="page" href="about">About</a>
+                                <a style="background-color: #FFCC22;" class="nav-link active text-white shadow shake-anim" aria-current="page" href="about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="contact">Contact</a>
+                                <a class="nav-link text-white shadow shake-anim" href="contact">Contact</a>
                             </li>
                         </nav>
                     </div>
@@ -147,19 +182,19 @@
 
         <div class="px-4 py-2 my-3 text-center anim" style="color: whitesmoke;">
             <img class="d-block mx-auto mb-4 anim" src="/static/effect-img.gif" alt="My-image" style="max-width: 250px; max-height: 250px; max-width: none;">
-            <h1 class="display-4 fw-bold">Satyam Mihsra</h1>
+            <h1 class="display-4 fw-bold shake-anim">Satyam Mihsra</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-1">I am a first year student perusing my <strong>B.Tech in Computer Science.</strong></p>
                 <p class="lead mb-4">Web Master at <strong>Renewable Energy</strong> Club.</p>
                 <p class="lead mb-1">Member of <strong>CSI Chapter</strong>(Computer society of India).</p>
                 <p class="lead mb-4">Member of <strong>IAAA</strong>(International Amateur Astronomical Association).</p>
-                <h3 class="display-5 fw-bold">Interests</h3>
+                <h3 class="display-5 fw-bold shake-anim">Interests</h3>
                 <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
 
                     <span class="badge rounded-pill bg-light text-black">Sketching</span>
                     <span class="badge rounded-pill bg-light text-black">Fitness</span>
                     <span class="badge rounded-pill bg-light text-black">Music</span>
-                    <span class="badge rounded-pill bg-light text-black">Lyrics writing</span>
+                    <span class="badge rounded-pill bg-light text-black">Basic Calisthenics</span>
                     <span class="badge rounded-pill bg-light text-black">Technology</span>
                     <span class="badge rounded-pill bg-light text-black">Psychology</span>
                     <span class="badge rounded-pill bg-light text-black">Cosmology</span>
@@ -169,7 +204,7 @@
 
                 </div>
 
-                <h3 class="display-5 fw-bold">Skills</h3>
+                <h3 class="display-5 fw-bold shake-anim">Skills</h3>
                 <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
 
                     <span class="badge rounded-pill bg-black text-white">Python</span>
@@ -193,13 +228,11 @@
                 </div>
 
                 <div class="gap-2 d-sm-flex justify-content-sm-center">
-                    <button style="background-color: #FFCC22;" class="btn btn-outline-dark align-self-center">Post me a msg!</button>
+                    <a href="contact"><button style="background-color: #FFCC22;" class="btn btn-outline-dark align-self-center shake-anim">Post me a msg!</button></a>
                 </div>
             </div>
         </div>
 
-
-        <hr>
 
 
         <!-- Footer -->

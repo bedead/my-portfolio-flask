@@ -114,6 +114,41 @@
             transform: translateY(0);
         }
     }
+    /*  button shake animation */
+    
+    .shake-anim:hover {
+        animation-name: shakeAnim;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        position: relative;
+    }
+    
+    @keyframes shakeAnim {
+        0% {
+            left: 0
+        }
+        1% {
+            left: -3px
+        }
+        2% {
+            left: 5px
+        }
+        3% {
+            left: -8px
+        }
+        4% {
+            left: 8px
+        }
+        5% {
+            left: -5px
+        }
+        6% {
+            left: 3px
+        }
+        7% {
+            left: 0
+        }
+    }
 </style>
 
 
@@ -129,16 +164,16 @@
                         <h3 class="float-md-start mb-0 text-white">Satyam Mishra</h3>
                         <nav class="nav nav-pills bg-dark rounded-3 justify-content-center float-md-end">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="/">Home</a>
+                                <a class="nav-link text-white shadow shake-anim" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a style="background-color: #FFCC22;" class="nav-link active text-white" aria-current="page" href="projects">Projects</a>
+                                <a style="background-color: #FFCC22;" class="nav-link active text-white shadow shake-anim" aria-current="page" href="projects">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="about">About</a>
+                                <a class="nav-link text-white shadow shake-anim" href="about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="contact">Contact</a>
+                                <a class="nav-link text-white shadow shake-anim" href="contact">Contact</a>
                             </li>
                         </nav>
                     </div>
@@ -151,7 +186,7 @@
         <!-- uncoming - projects data/showcase-->
         <div class="container p-lg-3 py-2 anim">
 
-            <h2 class="display-3 fw-bold text-center text-white">Upcoming projects</h2>
+            <h2 class="display-3 fw-bold text-center text-white shake-anim">Upcoming projects</h2>
 
             <div id="carouselExampleFade" class="carousel carousel-fade slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -211,7 +246,7 @@
         <!--Current projects-->
         <div class="container p-2">
             <div class="px-4 pt-5 my-5 text-center border-bottom shadow anim" style="color: whitesmoke;">
-                <h1 class="display-1 fw-bold">Current projects</h1>
+                <h1 class="display-1 fw-bold shake-anim">Current projects</h1>
                 <br>
                 <br>
                 <h3 class="display-5 fw-bold">Simple Web Browser</h3>
