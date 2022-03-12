@@ -16,6 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
     <link rel="manifest" href="/static/favicon/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <title>Projects - Satyam Mishra</title>
 </head>
 
@@ -32,7 +33,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #222126;
+        background: black;
     }
     
     .wave {
@@ -149,6 +150,16 @@
             left: 0
         }
     }
+    
+    body {
+        margin: 0;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        height: 100vh;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 </style>
 
 
@@ -157,24 +168,22 @@
 
     <div id="content" class="container p-0">
         <div class="container-fluid p-4 text-center">
-
             <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-                <header class="mb-auto">
+                <header>
                     <div>
-                        <h3 class="float-md-start mb-0 text-white">Satyam Mishra</h3>
-                        <nav class="nav nav-pills bg-dark rounded-3 justify-content-center float-md-end">
-                            <li class="nav-item">
-                                <a class="nav-link text-white shadow shake-anim" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a style="background-color: #FFCC22;" class="nav-link active text-white shadow shake-anim" aria-current="page" href="projects">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white shadow shake-anim" href="about">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white shadow shake-anim" href="contact">Contact</a>
-                            </li>
+                        <button class="header__button nav-btn-js" type="button"></button>
+                        <nav class="header__nav nav-js p-lg-3 pt-md-3" data-active="false">
+                            <ul class="header__menu pt-lg-5 mt-5 pt-5">
+                                <li class="header__menu-item"><a href="/">Home</a></li>
+                                <li class="header__menu-item"><a href="about">About</a></li>
+                                <li class="header__menu-item"><a href="projects">Projects</a></li>
+                                <li class="header__menu-item"><a href="contact">Contact</a></li>
+                            </ul>
+                            <div class="social-buttons mt-0 pt-0">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-google"></i></a>
+                            </div>
                         </nav>
                     </div>
                 </header>
@@ -182,55 +191,9 @@
         </div>
 
 
-
-        <!-- uncoming - projects data/showcase-->
-        <div class="container p-lg-3 py-2 anim">
-
-            <h2 class="display-3 fw-bold text-center text-white shake-anim">Upcoming projects</h2>
-
-            <div id="carouselExampleFade" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                </div>
-                <div class="carousel-inner pb-lg-5 p-3">
-
-                    <div class="carousel-item active">
-                        <div class="container col-xxl-8 px-4 py-5" style="color: whitesmoke;">
-                            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                                <div class="col-10 col-sm-8 col-lg-6">
-                                    <img src="/static/project-elements/WebisBig-ChatBot-banner.gif" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-                                </div>
-                                <div class="col-lg-6">
-                                    <h1 class="display-5 fw-bold lh-1 mb-3">Chat bot</h1>
-                                    <p class="lead">Interactive Chat bot capable of understanding human text and respond accordingly. For now it's going to be a web app, but in future I might create a android version of it.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End-->
-
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-
-
-
-
-
-
-        <!--Current projects-->
         <div class="container p-2">
             <h1 class="display-1 fw-bold shake-anim text-center text-white">Current projects</h1>
-            <br>
-            <br>
+            <hr>
             <div class="row row-cols-lg-2 row-cols-sm-1 row-cols-md-2 g-2">
                 <div class="cols">
                     <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke; background-color: black;">
@@ -247,6 +210,8 @@
                                 <img src="/static/project-elements/current-project/browser-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Browser image" width="600" height="500" loading="lazy">
                             </div>
                         </div>
+                        <br>
+                        <h5 style="float: left;">Last Version</h5>
                     </div>
                 </div>
                 <div class="cols">
@@ -264,6 +229,9 @@
                                 <img src="/static/project-elements/current-project/Shape-out-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="game image" width="600" height="500" loading="lazy">
                             </div>
                         </div>
+                        <br>
+
+                        <h5 style="float: left;">Last Version</h5>
                     </div>
                 </div>
                 <div class="cols">
@@ -282,17 +250,19 @@
                                 <img src="/static/project-elements/current-project/Calculator-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Calculator image" width="600" height="500" loading="lazy">
                             </div>
                         </div>
+                        <br>
+
+                        <h5 style="float: left;">Last Version</h5>
                     </div>
                 </div>
                 <div class="cols">
                     <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
                         <h3 class="display-5 fw-bold">Translation App</h3>
                         <div class="col-lg-6 mx-auto">
-
                             <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                 <span class="badge rounded-pill bg-light text-black">Kivymd</span>
                                 <span class="badge rounded-pill bg-light text-black">Kivy</span>
-                                <span class="badge rounded-pill bg-light text-black">Google translation api</span>
+                                <span class="badge rounded-pill bg-light text-black">PyDictionary</span>
                                 <span class="badge rounded-pill bg-light text-black">Python</span>
                             </div>
                         </div>
@@ -301,11 +271,14 @@
                                 <img src="/static/project-elements/current-project/Translation-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="App image" width="600" height="500" loading="lazy">
                             </div>
                         </div>
+                        <br>
+
+                        <h5 style="float: left;">New version coming..</h5>
                     </div>
                 </div>
                 <div class="cols">
                     <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
-                        <h3 class="display-5 fw-bold">This Website</h3>
+                        <h3 class="display-5 fw-bold">This Portfolio Website</h3>
                         <div class="col-lg-6 mx-auto">
 
                             <div class="gap-2 d-sm-flex justify-content-center mb-2">
@@ -320,6 +293,8 @@
                                 <img src="/static/project-elements/current-project/Website-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Website image" width="600" height="500" loading="lazy">
                             </div>
                         </div>
+                        <br>
+                        <h5 style="float: left;">Constantly underdevelopment..</h5>
                     </div>
                 </div>
                 <div class="cols">
@@ -340,116 +315,33 @@
                                 </video>
                             </div>
                         </div>
+                        <br>
+                        <h5 style="float: left;">Last Version</h5>
+                    </div>
+                </div>
+                <div class="cols">
+                    <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
+                        <h3 class="display-5 fw-bold">Hi Software</h3>
+                        <div class="col-lg-6 mx-auto">
+
+                            <div class="gap-2 d-sm-flex justify-content-center mb-2">
+                                <span class="badge rounded-pill bg-light text-black">Tkinter</span>
+                                <span class="badge rounded-pill bg-light text-black">Speech Recognition</span>
+                                <span class="badge rounded-pill bg-light text-black">Python</span>
+                                <span class="badge rounded-pill bg-light text-black">More libraries</span>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden" style="max-height: 30vh;">
+                            <div class="container px-5">
+                                <img src="/static/project-elements/current-project/Website-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Website image" width="600" height="500" loading="lazy">
+                            </div>
+                        </div>
+                        <br>
+                        <h5 style="float: left;">Last Version</h5>
                     </div>
                 </div>
             </div>
         </div>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer class="page-footer font-small indigo anim" style="background: color #212121;">
-
-            <!-- Footer Links -->
-            <div class="container text-white">
-
-                <!-- Grid row-->
-                <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 mb-3">
-                        <h6 class="text-uppercase font-weight-bold">
-                            <a style="color: #FFCC22;" href="about">About</a>
-                        </h6>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 mb-3 ">
-                        <h6 class="text-uppercase font-weight-bold ">
-                            <a style="color: #FFCC22;" href="projects">Projects</a>
-                        </h6>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 mb-3 ">
-                        <h6 class="text-uppercase font-weight-bold ">
-                            <a style="color: #FFCC22;" href="contact">Contact</a>
-                        </h6>
-                    </div>
-                    <!-- Grid column -->
-
-
-                </div>
-                <!-- Grid row-->
-                <hr class="rgba-white-light " style="margin: 0 15%; ">
-
-                <!-- Grid row-->
-                <div class="row d-flex text-center justify-content-center mb-md-1 mb-2 ">
-
-                    <!-- Grid column -->
-                    <div class="col-md-8 col-12 mt-5 ">
-                        <p style="line-height: 1.7rem ">Feel free to contact me for any collaborations, queries, and suggestions.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row-->
-                <hr class="clearfix d-md-none rgba-white-light " style="margin: 10% 15% 5%; ">
-
-                <!-- Social Links-->
-
-                <!-- Grid row-->
-                <div class="row pb-3 ">
-
-                    <!-- Grid column -->
-                    <div class="col-md-12 ">
-
-                        <div class="mb-5 flex-center ">
-
-                            <ul class="list-unstyled list-inline text-center">
-
-                                <!-- Github link-->
-                                <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="https://github.com/bedead">
-                                        <img src="/static/universal-elements/github-dark.svg">
-                                    </a>
-                                </li>
-                                <!-- Gmail link-->
-                                <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="mailto:satyam.work.only@gmail.com">
-                                        <img src="/static/universal-elements/gmail-dark.svg">
-                                    </a>
-                                </li>
-                                <!-- Linkedin link-->
-                                <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="https://www.linkedin.com/in/satyam-mishra-019bab225">
-                                        <img src="/static/universal-elements/linkedin-dark.svg">
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row-->
-
-            </div>
-            <!-- Footer Links -->
-
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-1" style=" color: white; ">© 2020 Copyright:
-                <p>Satyam Mishra</p>
-            </div>
-
-
-        </footer>
-        <!-- Footer -->
     </div>
 
     <div id='loader-wrapper' class="center">
@@ -472,7 +364,7 @@
     var myVar;
 
     function ScreenLoader() {
-        myVar = setTimeout(showPage, 1000);
+        myVar = setTimeout(showPage, 500);
     }
 
     function showPage() {
@@ -521,7 +413,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js " integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js " integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 " crossorigin="anonymous "></script>
     -->
-
+<script src="/static/index.js"></script>
+<script src="/static/reverler.js"></script>
+<link href="/static/nav_bar.css" rel="stylesheet">
 
 </html>
 

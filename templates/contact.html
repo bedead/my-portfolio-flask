@@ -16,6 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
     <link rel="manifest" href="/static/favicon/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <title>Contact - Satyam Mishra</title>
 </head>
 
@@ -31,7 +32,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #222126;
+        background: black;
     }
     
     .wave {
@@ -158,22 +159,21 @@
         <div class="container-fluid p-lg-5 text-center">
 
             <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-                <header class="mb-auto">
+                <header>
                     <div>
-                        <h3 class="float-md-start mb-0 text-white">Satyam Mishra</h3>
-                        <nav class="nav nav-pills bg-dark rounded-3 justify-content-center float-md-end">
-                            <li class="nav-item">
-                                <a class="nav-link text-white shadow shake-anim" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white shadow shake-anim" href="projects">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white shadow shake-anim" href="about">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a style="background-color: #FFCC22;" class="nav-link active text-white shadow shake-anim" aria-current="page" href="contact">Contact</a>
-                            </li>
+                        <button class="header__button nav-btn-js" type="button"></button>
+                        <nav class="header__nav nav-js p-lg-3 pt-md-3" data-active="false">
+                            <ul class="header__menu pt-lg-5 mt-5 pt-5">
+                                <li class="header__menu-item"><a href="/">Home</a></li>
+                                <li class="header__menu-item"><a href="about">About</a></li>
+                                <li class="header__menu-item"><a href="projects">Projects</a></li>
+                                <li class="header__menu-item"><a href="contact">Contact</a></li>
+                            </ul>
+                            <div class="social-buttons mt-0 pt-0">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-google"></i></a>
+                            </div>
                         </nav>
                     </div>
                 </header>
@@ -181,7 +181,7 @@
                 <br>
 
                 <div class="container p-5 anim">
-
+                    <h1 class="text-white mb-0">Contact form</h1>
                     {% for message in get_flashed_messages() %}
                     <div class="container-fluid p-lg-0 p-md-2 py-sm-3">
                         <div class="alert alert-danger alert-dismissible" role="alert">
@@ -218,110 +218,6 @@
                 </div>
             </div>
         </div>
-
-
-        <!-- Footer -->
-        <footer class="page-footer font-small indigo anim" style="background: color #212121;">
-
-            <!-- Footer Links -->
-            <div class="container text-white">
-
-                <!-- Grid row-->
-                <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 mb-3">
-                        <h6 class="text-uppercase font-weight-bold">
-                            <a style="color: #FFCC22;" href="about">About</a>
-                        </h6>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 mb-3 ">
-                        <h6 class="text-uppercase font-weight-bold ">
-                            <a style="color: #FFCC22;" href="projects">Projects</a>
-                        </h6>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 mb-3 ">
-                        <h6 class="text-uppercase font-weight-bold ">
-                            <a style="color: #FFCC22;" href="contact">Contact</a>
-                        </h6>
-                    </div>
-                    <!-- Grid column -->
-
-
-                </div>
-                <!-- Grid row-->
-                <hr class="rgba-white-light " style="margin: 0 15%; ">
-
-                <!-- Grid row-->
-                <div class="row d-flex text-center justify-content-center mb-md-1 mb-2 ">
-
-                    <!-- Grid column -->
-                    <div class="col-md-8 col-12 mt-5 ">
-                        <p style="line-height: 1.7rem ">Feel free to contact me for any collaborations, queries, and suggestions.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row-->
-                <hr class="clearfix d-md-none rgba-white-light " style="margin: 10% 15% 5%; ">
-
-                <!-- Social Links-->
-
-                <!-- Grid row-->
-                <div class="row pb-3 ">
-
-                    <!-- Grid column -->
-                    <div class="col-md-12 ">
-
-                        <div class="mb-5 flex-center ">
-
-                            <ul class="list-unstyled list-inline text-center">
-
-                                <!-- Github link-->
-                                <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="https://github.com/bedead">
-                                        <img src="/static/universal-elements/github-dark.svg">
-                                    </a>
-                                </li>
-                                <!-- Gmail link-->
-                                <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="mailto:satyam.work.only@gmail.com">
-                                        <img src="/static/universal-elements/gmail-dark.svg">
-                                    </a>
-                                </li>
-                                <!-- Linkedin link-->
-                                <li class="list-inline-item">
-                                    <a class="btn-floating btn-fb mx-1" href="https://www.linkedin.com/in/satyam-mishra-019bab225">
-                                        <img src="/static/universal-elements/linkedin-dark.svg">
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row-->
-
-            </div>
-            <!-- Footer Links -->
-
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-1" style=" color: white; ">© 2020 Copyright:
-                <p>Satyam Mishra</p>
-            </div>
-
-        </footer>
-        <!-- Footer -->
     </div>
 
     <div id='loader-wrapper' class="center">
@@ -343,7 +239,7 @@
     var myVar;
 
     function ScreenLoader() {
-        myVar = setTimeout(showPage, 1000);
+        myVar = setTimeout(showPage, 500);
     }
 
     function showPage() {
@@ -394,6 +290,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js " integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 " crossorigin="anonymous "></script>
     -->
 
+<script src="/static/index.js"></script>
+<script src="/static/reverler.js"></script>
+<link href="/static/nav_bar.css" rel="stylesheet">
 
 </html>
 
