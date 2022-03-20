@@ -16,7 +16,7 @@ mail = Mail(app)
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'satyammishra.site@gmail.com'
-app.config['MAIL_PASSWORD'] = 'xi:77c55diQUWnB'
+app.config['MAIL_PASSWORD'] = 'HW8@Q-6Bt9lExon'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -24,26 +24,8 @@ mail = Mail(app)
 
 
 
-@app.route('/')
+@app.route('/',methods=['GET','POST'])
 def home():
-    return render_template("index.html")
-
-
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
-
-
-@app.route('/about')
-# about section of portfolio
-def about():
-    return render_template("about.html")
-
-
-@app.route('/contact', methods=['GET', 'POST'])
-# droping a msg page.
-def contact():
-    
     if request.method == "POST":
         name = request.form.get('name')
         email = request.form.get('email')
@@ -65,7 +47,5 @@ def contact():
             return redirect('/')
         else:
             flash("Make sure to fill out all the fields.", 'error')
-            return render_template('contact.html')
-            
-
-    return render_template('contact.html')
+            return render_template('home.html')
+    return render_template("home.html")
