@@ -31,7 +31,6 @@ def home():
         email = request.form.get('email')
         desc = request.form.get('msg')
 
-        print('name')
 
         if name and email and desc:
             msg = Message(

@@ -5,8 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Satyam, Mishra, Portfolio">
-    <meta name="description" content="portfolio website">
+    <meta name="keywords" content="Satyam Mishra, Portfolio, graphics portfolio website, responsive portfolio website">
+    <meta name="description" content="Portfolio website">
     <meta name="author" content="Satyam Mishra">
 
     <!-- Bootstrap CSS -->
@@ -18,6 +18,7 @@
     <link rel="manifest" href="/static/favicon/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/website-files/soical_button.css">
+    <link rel="stylesheet" href="/static/website-files/projects_card.css">
     <title>Satyam Mishra</title>
 </head>
 
@@ -27,36 +28,36 @@
     }
 </style>
 
-<body>
+<body data-spy="scroll" data-target="#fixed-nav" data-bs-offset="50" style="position: relative;">
 
 
 
 
 
+    <nav id="fixed-nav" class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Horizontal navbar">
+        <div class="container-xl">
+            <a href="/">
+                <h1 class="font-italic" style="color:#e1fcfdff">Portfolio</h1>
+            </a>
+            <div class="text-center nav nav-pills bg-dark rounded-3 justify-content-center float-md-end">
+                <li class="nav-item active">
+                    <a style="background-color: #00006fff;" class="nav-link text-white hover-nav-color" href="#heroimage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white hover-nav-color" href="#About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white hover-nav-color" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white hover-nav-color" href="#footer">Contact</a>
+                </li>
+            </div>
+        </div>
+    </nav>
 
 
     <div id="heroimage" class="container-fluid mt-0 mb-0" style="background-color: #00006fff;background-image:url('/static/universal-elements/satyam-vector-2.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center; height: 100%;">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Horizontal navbar">
-            <div class="container-xl">
-                <a href="/">
-                    <h1 class="font-italic" style="color:#e1fcfdff">Portfolio</h1>
-                </a>
-                <div class="text-center nav nav-pills bg-dark rounded-3 justify-content-center float-md-end">
-                    <li class="nav-item">
-                        <a style="background-color: #00006fff;" class="nav-link active text-white hover-nav-color" aria-current="page" href="#heroimage">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white hover-nav-color" href="#About">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white hover-nav-color" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white hover-nav-color" href="#footer">Contact</a>
-                    </li>
-                </div>
-            </div>
-        </nav>
         {% for message in get_flashed_messages() %}
         <br>
         <br>
@@ -89,7 +90,7 @@
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/static/universal-elements/about-work-bg-image.jpg'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-work-bg-image.jpg'); position: relative; background-repeat: no-repeat; background-size: cover;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold">Work</h2>
                         <p class="lead mb-1">Web Master at <strong>Renewable Energy</strong> Club.</p>
@@ -100,7 +101,7 @@
             </div>
 
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/static/universal-elements/about-Interests-bg-image.jpg'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-Interests-bg-image.jpg'); position: relative; background-repeat: no-repeat; background-size: cover;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold">Interests</h2>
                         <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
@@ -122,7 +123,7 @@
             </div>
 
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/static/universal-elements/about-skills-bg-image.jpg'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-skills-bg-image.jpg'); position: relative; background-repeat: no-repeat; background-size: cover;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold">Skills</h2>
                         <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
@@ -164,132 +165,116 @@
     background-size: cover;background-repeat: no-repeat;">
         <div class="container p-2">
             <h1 class="display-2 fw-bold shake-anim text-center text-white">Current projects</h1>
-            <div class="row row-cols-lg-2 row-cols-sm-1 row-cols-md-2 g-2">
-                <div class="cols">
-                    <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke; background-color: black;">
-                        <h3 class="display-5 fw-bold">Simple Web Browser</h3>
-                        <div class="col-lg-6 mx-auto">
-                            <!-- text can be added here-->
-                            <div class="gap-2 d-sm-flex justify-content-center mb-2">
-                                <span class="badge rounded-pill bg-light text-black">Pyqt5</span>
-                                <span class="badge rounded-pill bg-light text-black">Python</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden" style="max-height: 30vh;">
-                            <div class="container px-5">
-                                <img src="/static/universal-elements/projects-browser-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Browser image" width="500" height="400">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cols">
-                    <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
-                        <h3 class="display-5 fw-bold">Shape out - Game</h3>
-                        <div class="col-lg-6 mx-auto">
 
-                            <div class="gap-2 d-sm-flex justify-content-center mb-2">
-                                <span class="badge rounded-pill bg-light text-black">Godot Engine</span>
-                                <span class="badge rounded-pill bg-light text-black">Gd-Script</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden" style="max-height: 30vh;">
-                            <div class="container px-5">
-                                <img src="/static/universal-elements/projects-Shape-out-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="game image" width="500" height="400">
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="display-5 fw-bold">Simple Web Browser</h3>
+                            <div class="col-lg-6 mx-auto">
+                                <!-- text can be added here-->
+                                <div class="gap-2 d-sm-flex justify-content-center mb-2">
+                                    <span class="badge rounded-pill bg-light text-black">Pyqt5</span>
+                                    <span class="badge rounded-pill bg-light text-black">Python</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="cols">
-                    <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
-                        <h3 class="display-5 fw-bold">Simple Calculator</h3>
-                        <div class="col-lg-6 mx-auto">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url(' /static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="display-5 fw-bold">Shape out - Game</h3>
+                            <div class="col-lg-6 mx-auto">
+                                <div class="gap-2 d-sm-flex justify-content-center mb-2">
+                                    <span class="badge rounded-pill bg-light text-black">Godot Engine</span>
+                                    <span class="badge rounded-pill bg-light text-black">Gd-Script</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.amazon.com/Bedead-Shape-Out-2d-platformer/dp/B0999LHBYN/ref=sr_1_1?qid=1648120404&refinements=p_4%3ABedead&s=mobile-apps&search-type=ss&sr=1-1"><button style="background-color: #00006fff;" type="button" class="text-white btn btn-outline-dark mb-1 px-3 shake-anim">Show Project</button></a>
 
-                            <div class="gap-2 d-sm-flex justify-content-center mb-2">
-                                <span class="badge rounded-pill bg-light text-black">Kivy</span>
-                                <span class="badge rounded-pill bg-light text-black">Kivymd</span>
-                                <span class="badge rounded-pill bg-light text-black">Python</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden" style="max-height: 30vh;">
-                            <div class="container px-5">
-                                <img src="/static/universal-elements/projects-Calculator-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Calculator image" width="500" height="400">
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="cols">
-                    <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
-                        <h3 class="display-5 fw-bold">Translation App</h3>
-                        <div class="col-lg-6 mx-auto">
-                            <div class="gap-2 d-sm-flex justify-content-center mb-2">
-                                <span class="badge rounded-pill bg-light text-black">Kivymd</span>
-                                <span class="badge rounded-pill bg-light text-black">Kivy</span>
-                                <span class="badge rounded-pill bg-light text-black">PyDictionary</span>
-                                <span class="badge rounded-pill bg-light text-black">Python</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden" style="max-height: 30vh;">
-                            <div class="container px-5">
-                                <img src="/static/universal-elements/projects-Translation-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="App image" width="500" height="400">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cols">
-                    <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
-                        <h3 class="display-5 fw-bold">This Portfolio Website</h3>
-                        <div class="col-lg-6 mx-auto">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="display-5 fw-bold">Simple Calculator</h3>
+                            <div class="col-lg-6 mx-auto">
 
-                            <div class="gap-2 d-sm-flex justify-content-center mb-2">
-                                <span class="badge rounded-pill bg-light text-black">Django</span>
-                                <span class="badge rounded-pill bg-light text-black">Html</span>
-                                <span class="badge rounded-pill bg-light text-black">Bootstrap</span>
-                                <span class="badge rounded-pill bg-light text-black">JavaScript</span>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden" style="max-height: 30vh;">
-                            <div class="container px-5">
-                                <img src="/static/universal-elements/projects-website-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Website image" width="500" height="400">
+                                <div class="gap-2 d-sm-flex justify-content-center mb-2">
+                                    <span class="badge rounded-pill bg-light text-black">Kivy</span>
+                                    <span class="badge rounded-pill bg-light text-black">Kivymd</span>
+                                    <span class="badge rounded-pill bg-light text-black">Python</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="cols">
-                    <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
-                        <h3 class="display-5 fw-bold">Face Detection</h3>
-                        <div class="col-lg-6 mx-auto">
-
-                            <div class="gap-2 d-sm-flex justify-content-center mb-2">
-                                <span class="badge rounded-pill bg-light text-black">OpenCV</span>
-                                <span class="badge rounded-pill bg-light text-black">Python</span>
-                                <span class="badge rounded-pill bg-light text-black">Casscade Models</span>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="display-5 fw-bold">Translation App</h3>
+                            <div class="col-lg-6 mx-auto">
+                                <div class="gap-2 d-sm-flex justify-content-center mb-2">
+                                    <span class="badge rounded-pill bg-light text-black">Kivymd</span>
+                                    <span class="badge rounded-pill bg-light text-black">Kivy</span>
+                                    <span class="badge rounded-pill bg-light text-black">PyDictionary</span>
+                                    <span class="badge rounded-pill bg-light text-black">Python</span>
+                                </div>
                             </div>
+                            <a target="_blank" href="https://github.com/bedead/kivymd-language-translation-app"><button style="background-color: #00006fff;" type="button" class="text-white btn btn-outline-dark mb-1 px-3 shake-anim">Show Project</button></a>
+
                         </div>
-                        <div class="overflow-hidden" style="max-height: 30vh;">
-                            <div class="container px-5">
-                                <video autoplay="autoplay" loop="true" controls muted class="img-fluid border rounded-3 shadow-lg mb-4">
-                                    <source src="/static/universal-elements/projects-Face detector video.mp4" type="video/mp4" width="500" height="400"/>
-                                </video>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="display-5 fw-bold">This Portfolio Website</h3>
+                            <div class="col-lg-6 mx-auto">
+                                <div class="gap-2 d-sm-flex justify-content-center mb-2">
+                                    <span class="badge rounded-pill bg-light text-black">Django</span>
+                                    <span class="badge rounded-pill bg-light text-black">Html</span>
+                                    <span class="badge rounded-pill bg-light text-black">Bootstrap</span>
+                                    <span class="badge rounded-pill bg-light text-black">JavaScript</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="cols">
-                    <div class="px-4 pt-5 my-5 text-center border-top border-4 shadow anim rounded-3" style="color: whitesmoke;background-color: black;">
-                        <h3 class="display-5 fw-bold">Hi Software</h3>
-                        <div class="col-lg-6 mx-auto">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="display-5 fw-bold">Face Detection</h3>
+                            <div class="col-lg-6 mx-auto">
 
-                            <div class="gap-2 d-sm-flex justify-content-center mb-2">
-                                <span class="badge rounded-pill bg-light text-black">Tkinter</span>
-                                <span class="badge rounded-pill bg-light text-black">Speech Recognition</span>
-                                <span class="badge rounded-pill bg-light text-black">Python</span>
-                                <span class="badge rounded-pill bg-light text-black">More libraries</span>
+                                <div class="gap-2 d-sm-flex justify-content-center mb-2">
+                                    <span class="badge rounded-pill bg-light text-black">OpenCV</span>
+                                    <span class="badge rounded-pill bg-light text-black">Python</span>
+                                    <span class="badge rounded-pill bg-light text-black">Casscade Models</span>
+                                </div>
                             </div>
+                            <a target="_blank" href="https://github.com/bedead/FACE-DETECTOR"><button style="background-color: #00006fff;" type="button" class="text-white btn btn-outline-dark mb-1 px-3 shake-anim">Show Project</button></a>
+
                         </div>
-                        <div class="overflow-hidden" style="max-height: 30vh;">
-                            <div class="container px-5">
-                                <img src="/static/universal-elements/projects-Hibot-screen.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Website image" width="500" height="400">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="display-5 fw-bold">Hi Software</h3>
+                            <div class="col-lg-6 mx-auto">
+
+                                <div class="gap-2 d-sm-flex justify-content-center mb-2">
+                                    <span class="badge rounded-pill bg-light text-black">Tkinter</span>
+                                    <span class="badge rounded-pill bg-light text-black">Speech Recognition</span>
+                                    <span class="badge rounded-pill bg-light text-black">Python</span>
+                                    <span class="badge rounded-pill bg-light text-black">More libraries</span>
+                                </div>
                             </div>
+                            <a target="_blank" href="https://github.com/bedead/HI_2021.12.22.4"><button style="background-color: #00006fff;" type="button" class="text-white btn btn-outline-dark mb-1 px-3 shake-anim">Show Project</button></a>
+
                         </div>
                     </div>
                 </div>
@@ -362,9 +347,6 @@
 
 
 </body>
-<script>
-</script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
 
