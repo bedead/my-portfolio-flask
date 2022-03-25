@@ -2,3 +2,4 @@
 templates/index_copy.html
 app/__pycache__
 colors.txt
+past-templates

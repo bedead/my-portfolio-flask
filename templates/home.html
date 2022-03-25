@@ -18,12 +18,32 @@
     <link rel="manifest" href="/static/favicon/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/website-files/soical_button.css">
+    <link rel="stylesheet" href="/static/website-files/hero-name.css">
     <title>Satyam Mishra</title>
 </head>
 
 <style>
+    body {
+        font-family: 'Fira Code', monospace;
+    }
+    
     .hover-nav-color:hover {
         background-color: #00006fff;
+    }
+    
+    .map-container-3 {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+    }
+    
+    .map-container-3 iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
     }
 </style>
 
@@ -56,7 +76,7 @@
     </nav>
 
 
-    <div id="heroimage" class="container-fluid mt-0 mb-0" style="background-color: #00006fff;background-image:url('/static/universal-elements/satyam-vector-2.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center; height: 100%;">
+    <div id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-color: #00006fff;background-image:url('/static/universal-elements/satyam-vector-2.png'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
         {% for message in get_flashed_messages() %}
         <br>
         <br>
@@ -68,10 +88,10 @@
             </div>
         </div>
         {% endfor %}
-        <div class="container-fluid p-5 pb-md-4 pb-sm-5 mt-0" style="text-align: center; top: 50%; left: 50%;">
-            <div class="card p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                <div class="card p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                    <h1 class="display-1" style="color: #e1fcfdff;">Satyam Mishra</h1>
+        <div class="container-fluid p-5 pb-md-4 pb-sm-5 pt-sm-5" style="text-align: center; top: 50%; left: 50%;">
+            <div class="p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
+                <div class="p-lg-0 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
+                    <h1 class="display-1 hero-text" style="color: #e1fcfdff;">Satyam Mishra</h1>
                     <h5 class="display-5" style="color: #e1fcfdff;">I am a Developer | Programmer</h5>
                 </div>
             </div>
@@ -86,8 +106,8 @@
 
 
     <div id="About" class="container-fluid px-4 py-5" style="background-color: #394f8aff;">
-
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <!-- Time for multiple clouds to dance around -->
             <div class="col">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-work-bg-image.jpg'); position: relative; background-repeat: no-repeat; background-size: cover;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -160,7 +180,7 @@
 
 
 
-    <div id="projects" class="container-fluid px-4 py-5 mb-0" style="background-color: #4a5fc1ff; background-attachment: fixed; background-image: url('/static/universal-elements/projects-bg-image.png');
+    <div id="projects" class="container-fluid px-4 py-5 mb-0" style="background-color: #00006fff; background-attachment: fixed; background-image: url('/static/universal-elements/projects-bg-image.png');
     background-size: cover;background-repeat: no-repeat;">
         <div class="container p-2">
             <h1 class="display-2 fw-bold shake-anim text-center text-white">Current projects</h1>
@@ -264,16 +284,13 @@
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                             <h3 class="display-5 fw-bold">Hi Software</h3>
                             <div class="col-lg-6 mx-auto">
-
                                 <div class="gap-2 d-sm-flex justify-content-center mb-2">
-                                    <span class="badge rounded-pill bg-light text-black">Tkinter</span>
-                                    <span class="badge rounded-pill bg-light text-black">Speech Recognition</span>
+                                    <span class="badge rounded-pill bg-light text-black">SpeechRecognition</span>
                                     <span class="badge rounded-pill bg-light text-black">Python</span>
                                     <span class="badge rounded-pill bg-light text-black">More libraries</span>
                                 </div>
                             </div>
                             <a target="_blank" href="https://github.com/bedead/HI_2021.12.22.4"><button style="background-color: #00006fff;" type="button" class="text-white btn btn-outline-dark mb-1 px-3 shake-anim">Show Project</button></a>
-
                         </div>
                     </div>
                 </div>
@@ -287,8 +304,9 @@
 
 
 
+
     <!-- Remove the container if you want to extend the Footer to full width. -->
-    <div id="footer" class="container-fluid mt-0" style="background-color: #e5b9a8ff;">
+    <div id="footer" class="container-fluid mt-0" style="background-color: #394f8aff;">
 
         <footer class="text-center text-lg-start mt-0 pt-4">
             <!-- Grid container -->
@@ -304,7 +322,7 @@
                     </div>
 
                     <!--Grid column-->
-                    <div class="col-lg-12 col-md-6 mb-0 mb-lg-0">
+                    <div class="col-lg-6 col-md-6 mb-0 mb-lg-0 mb-sm-3">
                         <div class="cols contact-from">
                             <h2 style="color: #00006fff;" class="text-center">Drop me a Message.</h2>
                             <div class="card pt-1 pb-0 " style="background-color: transparent; border: none; ">
@@ -328,15 +346,23 @@
                         </div>
                     </div>
                     <!--Grid column-->
+                    <div class="col-lg-6 col-md-6 mb-0 mb-lg-0 mt-lg-0 mt-sm-3 mt-md-3">
+                        <h2 style="color: #00006fff;" class="text-center">My Location</h2>
+                        <div class="cols mt-lg-5 mt-sm-2 mt-md-1">
+                            <div id="map-container-google-3 mt-sm-5" class="z-depth-1-half map-container-3">
+                                <iframe src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--Grid row-->
             </div>
             <!-- Grid container -->
 
             <!-- Copyright -->
-            <div class="text-center p-3">
+            <div class="text-center text-white p-3">
                 © 2020 Copyright:
-                <a class="" href="/">Satyam Mishra</a>
+                <a style="color: #00006fff;" class="" href="/">Satyam Mishra</a>
             </div>
             <!-- Copyright -->
         </footer>
