@@ -28,7 +28,15 @@
     }
     
     .hover-nav-color:hover {
-        background-color: #00006fff;
+        background-color: #E9DAC1;
+    }
+    
+    .nav-item a.nav-active {
+        border-bottom: 3px solid #C3B091;
+    }
+    
+    .nav-active {
+        border-bottom: 3px solid #C3B091;
     }
     
     .map-container-3 {
@@ -53,30 +61,29 @@
 
 
 
-    <nav id="fixed-nav" class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Horizontal navbar">
+    <nav id="fixed-nav" class="navbar navbar-expand-lg fixed-top" aria-label="Horizontal navbar">
         <div class="container-xl">
-            <a href="/">
-                <h1 class="font-italic" style="color:#e1fcfdff">Portfolio</h1>
-            </a>
-            <div class="text-center nav nav-pills bg-dark rounded-3 justify-content-center float-md-end">
-                <li class="nav-item active">
-                    <a style="background-color: #00006fff;" class="nav-link text-white hover-nav-color" href="#heroimage">Home</a>
+
+            <h1 class="nav-active font-italic" style="color:black">Portfolio</h1>
+            <div class="text-center nav nav-pills rounded-3 justify-content-center float-md-end">
+                <li class="nav-item">
+                    <a style="color: black;" class="nav-active nav-link hover-nav-color" href="#heroimage">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white hover-nav-color" href="#About">About</a>
+                    <a style="color: black;" class="nav-active nav-link hover-nav-color" href="#About">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white hover-nav-color" href="#projects">Projects</a>
+                    <a style="color: black;" class="nav-active nav-link hover-nav-color" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white hover-nav-color" href="#footer">Contact</a>
+                    <a style="color: black;" class="nav-active nav-link hover-nav-color" href="#footer">Contact</a>
                 </li>
             </div>
         </div>
     </nav>
 
 
-    <div id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-color: #00006fff;background-image:url('/static/universal-elements/satyam-vector-2.png'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
+    <div id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-color: #EEEEEE;background-image:url('/static/universal-elements/satyam-vector-2.png'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
         {% for message in get_flashed_messages() %}
         <br>
         <br>
@@ -91,8 +98,8 @@
         <div class="container-fluid p-5 pb-md-4 pb-sm-5 pt-sm-5" style="text-align: center; top: 50%; left: 50%;">
             <div class="p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
                 <div class="p-lg-0 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                    <h1 class="display-1 hero-text" style="color: #e1fcfdff;">Satyam Mishra</h1>
-                    <h5 class="display-5" style="color: #e1fcfdff;">I am a Developer | Programmer</h5>
+                    <h1 class="display-1 hero-text">Satyam Mishra</h1>
+                    <h5 class="display-5">I am a Developer | Programmer</h5>
                 </div>
             </div>
         </div>
@@ -105,7 +112,9 @@
 
 
 
-    <div id="About" class="container-fluid px-4 py-5" style="background-color: #394f8aff;">
+    <div id="About" class="container-fluid px-4 py-5" style="background-color: #FFF8F3;">
+        <h1 style="padding-left: 20px;" class="display-2 fw-bold shake-anim">About</h1>
+
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <!-- Time for multiple clouds to dance around -->
             <div class="col">
@@ -180,10 +189,10 @@
 
 
 
-    <div id="projects" class="container-fluid px-4 py-5 mb-0" style="background-color: #00006fff; background-attachment: fixed; background-image: url('/static/universal-elements/projects-bg-image.png');
+    <div id="projects" class="container-fluid px-4 py-5 mb-0" style="background-color: #EEEEEE; background-attachment: fixed; background-image: url('/static/universal-elements/projects-bg-image.png');
     background-size: cover;background-repeat: no-repeat;">
         <div class="container p-2">
-            <h1 class="display-2 fw-bold shake-anim text-center text-white">Current projects</h1>
+            <h1 class="display-2 fw-bold shake-anim">Current projects</h1>
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
                 <div class="col">
@@ -306,7 +315,7 @@
 
 
     <!-- Remove the container if you want to extend the Footer to full width. -->
-    <div id="footer" class="container-fluid mt-0" style="background-color: #394f8aff;">
+    <div id="footer" class="container-fluid mt-0" style="background-color: #FFF8F3;">
 
         <footer class="text-center text-lg-start mt-0 pt-4">
             <!-- Grid container -->
@@ -360,7 +369,7 @@
             <!-- Grid container -->
 
             <!-- Copyright -->
-            <div class="text-center text-white p-3">
+            <div class="text-center p-3">
                 © 2020 Copyright:
                 <a style="color: #00006fff;" class="" href="/">Satyam Mishra</a>
             </div>
