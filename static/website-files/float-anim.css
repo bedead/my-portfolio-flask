@@ -1,0 +1,17 @@
+.float-anim {
+    animation: float-anim 2s linear infinite;
+    /*animation: animation-name animation-duration animation-direction animation-iteration-count */
+    transition: .5s ease-in-out;
+}
+
+@keyframes float-anim {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-0px);
+    }
+}

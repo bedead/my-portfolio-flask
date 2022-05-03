@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="/static/website-files/hero-name.css">
     <link rel="stylesheet" href="/static/website-files/nav_bar.css">
     <link rel="stylesheet" href="/static/website-files/loading_screen.css">
+    <!--ANIMATIONS-->
+
+    <link rel="stylesheet" href="/static/website-files/slide-up.css">
+    <link rel="stylesheet" href="/static/website-files/float-anim.css">
     <title>Satyam Mishra</title>
 </head>
 
@@ -39,24 +43,6 @@
         display: none;
         opacity: 0;
     }
-    /* previous nav hover effect*/
-    /*
-    .hover-nav-color:hover {
-        background-color: #E9DAC1;
-    }
-    
-    .hover-nav-color-dark:hover {
-        background-color: #00006fff;
-    }
-    
-    .nav-item a.nav-active {
-        border-bottom: 3px solid #C3B091;
-    }
-    
-    .nav-active {
-        border-bottom: 3px solid #C3B091;
-    }
-    */
     
     .map-container-3 {
         overflow: hidden;
@@ -147,7 +133,7 @@
             <div class="container-fluid p-5 pb-md-4 pb-sm-5 pt-sm-5" style="text-align: center; top: 50%; left: 50%;">
                 <div class="p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
                     <div class="p-lg-0 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                        <h1 style="color: #00006fff;" class="display-1 hero-text pt-5 pt-lg-0">Satyam Mishra</h1>
+                        <h1 style="color: #00006fff;" class="display-1 hero-text pt-5 pt-lg-0 float-anim">Satyam Mishra</h1>
                         <h5 style="color: #00006fff;" class="display-5 pt-3 pt-lg-0 pb-3 pb-lg-0 pb-md-0">I am a Developer | Programmer</h5>
                     </div>
                 </div>
@@ -165,9 +151,9 @@
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-work-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold">Work</h2>
-                            <p class="lead mb-1">Member of <strong>CSI Chapter</strong>(Computer society of India).</p>
-                            <p class="lead mb-4">Member of <strong>IAAA</strong>(International Amateur Astronomical Association).</p>
+                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Work</h2>
+                            <p class="lead mb-1 anim">Member of <strong>CSI Chapter</strong>(Computer society of India).</p>
+                            <p class="lead mb-4 anim">Member of <strong>IAAA</strong>(International Amateur Astronomical Association).</p>
                         </div>
                     </div>
                 </div>
@@ -175,7 +161,7 @@
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-Interests-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold">Interests</h2>
+                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Interests</h2>
                             <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
 
                                 <span class="badge rounded-pill bg-light text-black">Sketching</span>
@@ -197,7 +183,7 @@
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-skills-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold">Skills</h2>
+                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Skills</h2>
                             <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
 
                                 <span class="badge rounded-pill bg-black text-white">Python</span>
@@ -239,7 +225,7 @@
                 <h1 style="color: #00006fff;" class="display-2 fw-bold shake-anim">Current projects</h1>
 
                 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-                    <div class="col">
+                    <div class="col anim">
                         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                                 <h3 class="display-5 fw-bold">Simple Web Browser</h3>
@@ -253,7 +239,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col anim">
                         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url(' /static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                                 <h3 class="display-5 fw-bold">Shape out - Game</h3>
@@ -268,7 +254,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col anim">
                         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                                 <h3 class="display-5 fw-bold">Simple Calculator</h3>
@@ -283,7 +269,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col anim">
                         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                                 <h3 class="display-5 fw-bold">Translation App</h3>
@@ -300,7 +286,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col anim">
                         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                                 <h3 class="display-5 fw-bold">This Portfolio Website</h3>
@@ -315,7 +301,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col anim">
                         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                                 <h3 class="display-5 fw-bold">Face Detection</h3>
@@ -332,7 +318,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col anim">
                         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                                 <h3 class="display-5 fw-bold">Hi Software</h3>
@@ -368,7 +354,7 @@
                     <div class="row">
                         <!--Grid column-->
                         <div class="social-buttons text-center col-md-4 col-lg-12 col-xl-12 mx-auto mt-0 mb-2">
-                            <h4 style="color: #00006fff;" class="text-uppercase mb-4 font-weight-bold">Social Links</h4>
+                            <h4 style="color: #00006fff;" class="text-uppercase mb-4 font-weight-bold anim">Social Links</h4>
                             <a target="_blank" style="color: #00006fff;" alt="linkedin link" href="https://www.linkedin.com/in/satyam-mishra-019bab225"><i class="fa fa-linkedin"></i></a>
                             <a target="_blank" style="color: #00006fff;" alt="github link" href="https://github.com/bedead"><i class="fa fa-github"></i></a>
                             <a target="_blank" style="color: #00006fff;" alt="mail link" href="mailto:satyam.work.only@gmail.com"><i class="fa fa-google"></i></a>
@@ -377,7 +363,7 @@
                         <!--Grid column-->
                         <div class="col-lg-6 col-md-6 mb-0 mb-lg-0 mb-sm-3">
                             <div class="cols contact-from">
-                                <h2 style="color: #00006fff;" class="text-center">Drop me a Message.</h2>
+                                <h2 style="color: #00006fff;" class="text-center anim">Drop me a Message.</h2>
                                 <div class="card pt-1 pb-0 " style="background-color: transparent; border: none; ">
                                     <form class="justify-content-center p-lg-5" method="post" action="/" role="form">
                                         <!-- Name input -->
@@ -400,7 +386,7 @@
                         </div>
                         <!--Grid column-->
                         <div class="col-lg-6 col-md-6 mb-0 mb-lg-0 mt-lg-0 mt-sm-3 mt-md-3">
-                            <h2 style="color: #00006fff;" class="text-center">My Location</h2>
+                            <h2 style="color: #00006fff;" class="text-center anim">My Location</h2>
                             <div class="cols mt-lg-5 mt-sm-2 mt-md-1">
                                 <div id="map-container-google-3 mt-sm-5" class="z-depth-1-half map-container-3">
                                     <iframe title="My location" src="https://maps.google.com/maps?q=VitAP+Campus+MH3&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -504,6 +490,20 @@
     //
 
     // slide up animation for elements
+    const images = document.querySelectorAll('.anim');
+
+    observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                entry.target.classList.add('slide-up-anim');
+            }
+        });
+    });
+
+    images.forEach(image => {
+        observer.observe(image);
+    });
+    //
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
 
