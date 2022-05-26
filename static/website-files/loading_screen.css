@@ -3,13 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--skin);
+    background: var(--white);
 }
 
 .wave {
     width: 5px;
     height: 100px;
-    background: linear-gradient(45deg, var(--dark-blue), #FFF8F3);
+    background: linear-gradient(45deg, var(--dark-blue), black);
     margin: 10px;
     animation: wave 1s linear infinite;
     border-radius: 20px;

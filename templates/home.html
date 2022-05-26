@@ -60,7 +60,7 @@
     }
 </style>
 
-<body onload="ScreenLoader()" data-spy="scroll" data-target="#fixed-nav" data-bs-offset="50" style="position: relative;">
+<body onload="ScreenLoader()" data-spy="scroll" data-target="#fixed-nav" data-bs-offset="50" style="position: relative; background-color:#FFF8F3;">
 
 
     <!-- 
@@ -133,7 +133,7 @@
             <div class="container-fluid p-5 pb-md-4 pb-sm-5 pt-sm-5" style="text-align: center; top: 50%; left: 50%;">
                 <div class="p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
                     <div class="p-lg-0 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                        <h1 style="color: #00006fff;" class="display-1 hero-text pt-5 pt-lg-0 float-anim">Satyam Mishra</h1>
+                        <h1 style="color: #00006fff;" id="hero-type" class="display-1 hero-text pt-5 pt-lg-0 hero-name" data-shadow="Satyam Mishra"></h1>
                         <h5 style="color: #00006fff;" class="display-5 pt-3 pt-lg-0 pb-3 pb-lg-0 pb-md-0">I am a Developer | Programmer</h5>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-work-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                             <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Work</h2>
-                            <p class="lead mb-1 anim">Member of <strong>CSI Chapter</strong>(Computer society of India).</p>
+                            <p class="lead mb-1 anim">Member of <strong>REC</strong>(Renewable energy club).</p>
                             <p class="lead mb-4 anim">Member of <strong>IAAA</strong>(International Amateur Astronomical Association).</p>
                         </div>
                     </div>
@@ -196,6 +196,7 @@
                                 <span class="badge rounded-pill bg-black text-white">Django</span>
                                 <span class="badge rounded-pill bg-black text-white">Flask</span>
                                 <span class="badge rounded-pill bg-black text-white">Java</span>
+                                <span class="badge rounded-pill bg-black text-white">JavaFX</span>
                                 <span class="badge rounded-pill bg-black text-white">Graphic Designing</span>
                                 <span class="badge rounded-pill bg-black text-white">Canva</span>
                                 <span class="badge rounded-pill bg-black text-white">Kivy/kivymd</span>
@@ -470,6 +471,7 @@
     function showPage() {
         document.getElementById("loader-wrapper").style.display = "none";
         document.getElementById("content").style.display = "block";
+        nameTypeWriter();
     }
 
     document.getElementById("content").onload = fadeIn();
@@ -485,7 +487,7 @@
             } else {
                 clearInterval(intervalID);
             }
-        }, 300);
+        }, );
     }
     //
 
@@ -499,10 +501,25 @@
             }
         });
     });
-
     images.forEach(image => {
         observer.observe(image);
     });
+    //
+
+    // for typing animation
+
+    var initial = 0;
+    var nameTxt = "Satyam Mishra";
+    var speed = 175;
+
+    function nameTypeWriter() {
+
+        if (initial < nameTxt.length) {
+            document.getElementById("hero-type").innerHTML += nameTxt.charAt(initial);
+            initial++;
+            setTimeout(nameTypeWriter, speed);
+        }
+    }
     //
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
