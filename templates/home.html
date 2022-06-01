@@ -92,7 +92,7 @@
     </nav> -->
 
     <div id="content" class="container p-0">
-        <header class="header fixed-top">
+        <header class="header fixed">
             <!-- Logo -->
             <h2 class="logo">Portfolio</h2>
 
@@ -119,21 +119,13 @@
 
 
         <div id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-color: #EEEEEE;background-image:url('/static/universal-elements/satyam-vector-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
-            {% for message in get_flashed_messages() %}
             <br>
             <br>
             <br>
-            <div class="container-fluid pt-sm-5 p-lg-0 p-md-2 py-sm-3">
-                <div class="alert alert-info alert-dismissible" role="alert">
-                    <strong>{{ message }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            </div>
-            {% endfor %}
             <div class="container-fluid p-5 pb-md-4 pb-sm-5 pt-sm-5" style="text-align: center; top: 50%; left: 50%;">
                 <div class="p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
                     <div class="p-lg-0 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                        <h1 style="color: #00006fff;font-family: 'Righteous', serif;" id="hero-type" class="display-1 hero-text pt-5 pt-lg-0 hero-name"></h1>
+                        <h1 style="color: #FFF8F3;font-family: 'Righteous', serif;text-shadow: #00006fff;text-shadow: 0 0 2px #FFF8F3, 0 0 3px #00006fff;" id="hero-type" class="display-1 hero-text pt-5 pt-lg-0 hero-name"></h1>
                         <h5 style="color: #00006fff;" class="display-5 pt-3 pt-lg-0 pb-3 pb-lg-0 pb-md-0">I am a Developer | Programmer</h5>
                     </div>
                 </div>
@@ -360,37 +352,12 @@
                             <a target="_blank" style="color: #00006fff;" alt="github link" href="https://github.com/bedead"><i class="fa fa-github"></i></a>
                             <a target="_blank" style="color: #00006fff;" alt="mail link" href="mailto:satyam.work.only@gmail.com"><i class="fa fa-google"></i></a>
                         </div>
-
-                        <!--Grid column-->
-                        <div class="col-lg-6 col-md-6 mb-0 mb-lg-0 mb-sm-3">
-                            <div class="cols contact-from">
-                                <h2 style="color: #00006fff;" class="text-center anim">Drop me a Message.</h2>
-                                <div class="card pt-1 pb-0 " style="background-color: transparent; border: none; ">
-                                    <form class="justify-content-center p-lg-5" method="post" action="/" role="form">
-                                        <!-- Name input -->
-                                        <div class="form-outline mb-4">
-                                            <input type="text" id="form4Example1" name="name" class="form-control shake-anim" placeholder="Enter your Name or Subject" />
-                                        </div>
-                                        <!-- Email input -->
-                                        <div class="form-outline mb-4">
-                                            <input type="email" id="form4Example2" name="email" class="form-control shake-anim" placeholder="Enter your Email address" />
-                                        </div>
-                                        <!-- Message input -->
-                                        <div class="form-outline mb-4">
-                                            <textarea class="form-control shake-anim" id="form4Example3" name="msg" rows="4" placeholder="Enter the messege!"></textarea>
-                                        </div>
-                                        <!-- Submit button -->
-                                        <button style="background-color: #00006fff;" type="submit" class="text-white btn btn-outline-dark mb-1 px-5 shake-anim">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-                        <div class="col-lg-6 col-md-6 mb-0 mb-lg-0 mt-lg-0 mt-sm-3 mt-md-3">
+                        <hr>
+                        <div class="col-lg-12 col-md-4 mb-0 mb-lg-0 mt-lg-0 mt-sm-2 mt-md-2">
                             <h2 style="color: #00006fff;" class="text-center anim">My Location</h2>
                             <div class="cols mt-lg-5 mt-sm-2 mt-md-1">
                                 <div id="map-container-google-3 mt-sm-5" class="z-depth-1-half map-container-3">
-                                    <iframe title="My location" src="https://maps.google.com/maps?q=VitAP+Campus+MH3&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    <iframe title="My location" src="https://maps.google.com/maps?q=KSR+GREEN+VALLEY&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
