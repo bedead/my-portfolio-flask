@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/static/website-files/loading_screen.css">
     <!--ANIMATIONS-->
     <link rel="stylesheet" href="/static/website-files/slide-up.css">
+    <link rel="stylesheet" href="/static/website-files/nav-scroll.css">
     <link rel="stylesheet" href="/static/website-files/float-anim.css">
     <!--GLOWING BUTTON-->
     <link rel="stylesheet" href="/static/website-files/button-glow.css">
@@ -108,7 +109,7 @@
             <!-- Menu -->
             <nav class="nav">
                 <ul class="menu">
-                    <li><a href="#heroimage">Home</a></li>
+                    <li><a href="#heroimage" class="active">Home</a></li>
                     <li><a href="#About">About</a> </li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#footer">Contact</a></li>
@@ -119,26 +120,26 @@
 
 
 
-        <div id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-color: #EEEEEE;background-image:url('/static/universal-elements/satyam-vector-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
+        <section id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-color: #EEEEEE;background-image:url('/static/universal-elements/satyam-vector-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
             <br>
             <br>
             <br>
             <div class="container-fluid p-5 pb-md-4 pb-sm-5 pt-sm-5" style="text-align: center; top: 50%; left: 50%;">
                 <div class="p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
                     <div class="p-lg-0 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                        <h1 style="color: #FFF8F3;font-family: 'Righteous', serif;text-shadow: 0 0 3px #FFF8F3, 0 0 5px #00006fff;" id="hero-type" class="display-1 hero-text pt-5 pt-lg-0 hero-name"></h1>
+                        <h1 style="color: #FFF8F3;font-family: 'Righteous', serif;text-shadow: 0 0 3px #FFF8F3, 0 0 5px #00006fff;" id="hero-type" class="display-1 hero-text pt-5 pt-lg-0 hero-name">Satyam Mishra</h1>
                         <h5 style="color: #00006fff;" class="display-5 pt-3 pt-lg-0 pb-3 pb-lg-0 pb-md-0">I am a Developer | Programmer</h5>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
 
 
 
-        <div id="About" class="container-fluid px-4 py-lg-5 py-md-4 py-3" style="background-color: #FFF8F3;">
-            <h1 style="padding-left: 20px; color: #00006fff;" class="display-2 fw-bold shake-anim">About</h1>
+        <section id="About" class="container-fluid px-4 py-lg-5 py-md-4 py-3 reveal fade-bottom" style="background-color: #FFF8F3;">
+            <h1 style="padding-left: 20px; color: #00006fff;" class="display-2 fw-bold">About</h1>
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-lg-5 py-3">
                 <div class="col">
@@ -208,7 +209,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
 
@@ -217,7 +218,7 @@
 
 
 
-        <div id="projects" class="container-fluid px-4 py-5 mb-0" style="background-color: #EEEEEE; background-attachment: fixed; background-image: url('/static/universal-elements/projects-bg-image.webp');
+        <section id="projects" class="container-fluid px-4 py-5 mb-0 reveal fade-left" style="background-color: #EEEEEE; background-attachment: fixed; background-image: url('/static/universal-elements/projects-bg-image.webp');
     background-size: cover;background-repeat: no-repeat;">
             <div class="container p-2">
                 <h1 style="color: #00006fff;" class="display-2 fw-bold shake-anim">Current projects</h1>
@@ -347,7 +348,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
 
@@ -357,7 +358,7 @@
 
 
         <!-- Remove the container if you want to extend the Footer to full width. -->
-        <div id="footer" class="container-fluid mt-0" style="background-color: #FFF8F3;">
+        <section id="footer" class="container-fluid mt-0 reveal fade-right" style="background-color: #FFF8F3;">
 
             <footer class="text-center text-lg-start mt-0 pt-4">
                 <!-- Grid container -->
@@ -393,7 +394,7 @@
                 <!-- Copyright -->
             </footer>
 
-        </div>
+        </section>
         <!-- End of .container -->
     </div>
 
@@ -492,20 +493,48 @@
     });
     //
 
-    // for typing animation
 
-    var initial = 0;
-    var nameTxt = "Satyam Mishra";
-    var speed = 175;
+    // nav scroll effect on active element
+    let section = document.querySelectorAll("section");
+    let menu = document.querySelectorAll("div header nav ul li a");
 
-    function nameTypeWriter() {
+    window.onscroll = () => {
+        section.forEach((i) => {
+            let top = window.scrollY;
+            let offset = i.offsetTop - 150;
+            let height = i.offsetHeight;
+            let id = i.getAttribute("id");
 
-        if (initial < nameTxt.length) {
-            document.getElementById("hero-type").innerHTML += nameTxt.charAt(initial);
-            initial++;
-            setTimeout(nameTypeWriter, speed);
+            if (top >= offset && top < offset + height) {
+                menu.forEach((link) => {
+                    link.classList.remove("active");
+                    document
+                        .querySelector("div header nav ul li a[href*=" + id + "]")
+                        .classList.add("active");
+                });
+            }
+        });
+    };
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
         }
     }
+
+    window.addEventListener("scroll", reveal);
+
+    reveal();
     //
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
