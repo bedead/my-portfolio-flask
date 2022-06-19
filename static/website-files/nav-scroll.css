@@ -1,13 +1,5 @@
-div header nav ul li a:hover,
-div header nav ul li a.active {
-    background: #E9DAC1;
-    color: #42455a;
-    transition: 0.5s ease-out;
-    letter-spacing: 2px;
-}
-
 section {
-    min-height: 100vh;
+    min-height: 50vh;
     justify-content: center;
     align-items: center;
 }

@@ -33,9 +33,10 @@
 <style>
     @import url(https://fonts.googleapis.com/css?family=Righteous);
      :root {
-        --white: hsl(0, 0%, 98%);
-        --dark-blue: #00006fff;
-        --skin: #E9DAC1;
+        --Void: #0E0B16;
+        --FUSCHIA: #A239CA;
+        --JEWEL: #4717F6;
+        --STRAK:#E7DFDD;
     }
     
     body {
@@ -61,43 +62,20 @@
         width: 100%;
         position: absolute;
     }
+    .card:hover{
+        -ms-transform: scale(1.09);
+        -moz-transform: scale(1.09);
+        -webkit-transform: scale(1.09);
+        -o-transform: scale(1.09);
+        transform: scale(1.09);
+    }
 </style>
 
-<body onload="ScreenLoader()" data-spy="scroll" data-target="#fixed-nav" data-bs-offset="50" style="position: relative; background-color:#FFF8F3;">
-
-
-    <!-- 
-
-
-    <nav id="fixed-nav" class="navbar navbar-expand-lg fixed-top" aria-label="Horizontal navbar">
-        <div class="container-lg">
-
-            <h1 class="nav-active font-italic" style="color: #00006fff">Portfolio</h1>
-            <div class="btn-group d-flex">
-                <a id="light-btn" class="btn btn-outline-light active" onclick="change_mode()">Light</a>
-                <a id="dark-btn" class="btn btn-outline-dark" onclick="change_mode()">Dark</a>
-            </div>
-            <ul class="text-center nav nav-pills rounded-3 justify-content-center float-md-end float-sm-none">
-                <li class="nav-item">
-                    <a style="color: #00006fff;" class="nav-text nav-active nav-link hover-nav-color" href="#heroimage">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a style="color: #00006fff;" class="nav-text nav-active nav-link hover-nav-color" href="#About">About</a>
-                </li>
-                <li class="nav-item">
-                    <a style="color: #00006fff;" class="nav-text nav-active nav-link hover-nav-color" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a style="color: #00006fff;" class="nav-text nav-active nav-link hover-nav-color" href="#footer">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
-
+<body onload="ScreenLoader()" data-spy="scroll" data-target="#fixed-nav" data-bs-offset="50" style="position: relative; background-color:#0E0B16;">
     <div id="content" class="container p-0">
         <header class="header fixed-top">
-            <!-- Logo -->
-            <h2 class="logo">Portfolio</h2>
+            <!-- Logo --> 
+            <h2 class="logo"><strong style="color: var(--JEWEL);">Satyam</strong> Mishra</h2>
 
 
             <!-- Hamburger icon -->
@@ -120,15 +98,14 @@
 
 
 
-        <section id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-color: #EEEEEE;background-image:url('/static/universal-elements/satyam-vector-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
+        <section id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-image:url('/static/universal-elements/satyam-vector-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
             <br>
             <br>
             <br>
             <div class="container-fluid p-5 pb-md-4 pb-sm-5 pt-sm-5" style="text-align: center; top: 50%; left: 50%;">
                 <div class="p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
                     <div class="p-lg-0 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                        <h1 style="color: #FFF8F3;font-family: 'Righteous', serif;text-shadow: 0 0 3px #FFF8F3, 0 0 5px #00006fff;" id="hero-type" class="display-1 hero-text pt-5 pt-lg-0 hero-name">Satyam Mishra</h1>
-                        <h5 style="color: #00006fff;" class="display-5 pt-3 pt-lg-0 pb-3 pb-lg-0 pb-md-0">I am a Developer | Programmer</h5>
+                        <h5 style="color: var(--FUSCHIA)" class="display-5 pt-3 pt-lg-0 pb-3 pb-lg-0 pb-md-0">I am a <strong style="color: var(--JEWEL);">Developer | Programmer</strong></h5>
                     </div>
                 </div>
             </div>
@@ -138,14 +115,14 @@
 
 
 
-        <section id="About" class="container-fluid px-4 py-lg-5 py-md-4 py-3 reveal fade-bottom" style="background-color: #FFF8F3;">
-            <h1 style="padding-left: 20px; color: #00006fff;" class="display-2 fw-bold">About</h1>
+        <section id="About" class="container-fluid px-4 py-lg-5 py-md-4 py-3 reveal fade-bottom" >
+            <h1 style="color: var(--JEWEL);text-align:center;text-decoration: underline;" class="display-5 fw-bold">About</h1>
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-lg-5 py-3">
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-work-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-lg-4 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Eduction & Work</h2>
+                            <h2 style="color: var(--JEWEL);" class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Eduction & Work</h2>
                             <p class="lead mb-2 anim">B.TECH <strong>(Computer Science in AI and ML)  from VIT AP</strong></p>
 
                             <p class="lead mb-2 anim">Member of <strong>REC</strong>(Renewable energy club).</p>
@@ -157,7 +134,7 @@
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-Interests-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-lg-4 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Interests</h2>
+                            <h2 style="color: var(--JEWEL);" class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Interests</h2>
                             <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
 
                                 <span class="badge rounded-pill bg-light text-black">Sketching</span>
@@ -179,7 +156,7 @@
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-skills-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-lg-4 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Skills</h2>
+                            <h2 style="color: var(--JEWEL);" class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Skills</h2>
                             <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
 
                                 <span class="badge rounded-pill bg-black text-white">Python</span>
@@ -218,18 +195,17 @@
 
 
 
-        <section id="projects" class="container-fluid px-4 py-5 mb-0 reveal fade-left" style="background-color: #EEEEEE; background-attachment: fixed; background-image: url('/static/universal-elements/projects-bg-image.webp');
+        <section id="projects" class="container-fluid px-4 py-5 mb-0 reveal fade-left" );
     background-size: cover;background-repeat: no-repeat;">
             <div class="container p-2">
-                <h1 style="color: #00006fff;" class="display-2 fw-bold shake-anim">Current projects</h1>
+                <h1 style="color: var(--JEWEL);text-align: center;text-decoration: underline;" class="display-5 fw-bold shake-anim">Current projects</h1>
 
                 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
                     <div class="col anim">
-                        <!-- background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover; -->
 
                         <div class="card card-cover h-100 overflow-hidden text-white rounded-3" style="background-image: linear-gradient(to bottom right, #00006fff, #8278DA);box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 class="display-5 fw-bold anim">Simple Web Browser</h3>
+                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Simple Web Browser</h3>
                                 <div class="col-lg-6 mx-auto anim">
                                     <!-- text can be added here-->
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
@@ -246,14 +222,14 @@
 
                             <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url(' /static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 class="display-5 fw-bold anim">Shape out - Game</h3>
+                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Shape out - Game</h3>
                                 <div class="col-lg-6 mx-auto anim">
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">Godot Engine</span>
                                         <span class="badge rounded-pill bg-light text-black">Gd-Script</span>
                                     </div>
                                 </div>
-                                <a target="_blank" href="https://www.amazon.com/Bedead-Shape-Out-2d-platformer/dp/B0999LHBYN/ref=sr_1_1?qid=1648120404&refinements=p_4%3ABedead&s=mobile-apps&search-type=ss&sr=1-1"><button type="button" class="text-black btn glow-on-hover mb-1 px-3">Show Project</button></a>
+                                <a target="_blank" href="https://www.amazon.com/Bedead-Shape-Out-2d-platformer/dp/B0999LHBYN/ref=sr_1_1?qid=1648120404&refinements=p_4%3ABedead&s=mobile-apps&search-type=ss&sr=1-1"><button type="button" class="btn glow-on-hover mb-1 px-3">Show Project</button></a>
 
                             </div>
                         </div>
@@ -263,7 +239,7 @@
 
                             <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 class="display-5 fw-bold anim">Simple Calculator</h3>
+                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Simple Calculator</h3>
                                 <div class="col-lg-6 mx-auto anim">
 
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
@@ -280,7 +256,7 @@
 
                             <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 class="display-5 fw-bold anim">Translation App</h3>
+                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Translation App</h3>
                                 <div class="col-lg-6 mx-auto anim">
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">Kivymd</span>
@@ -289,7 +265,7 @@
                                         <span class="badge rounded-pill bg-light text-black">Python</span>
                                     </div>
                                 </div>
-                                <a target="_blank" href="https://github.com/bedead/kivymd-language-translation-app"><button type="button" class="text-black btn mb-1 px-3 glow-on-hover">Show Project</button></a>
+                                <a target="_blank" href="https://github.com/bedead/kivymd-language-translation-app"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
 
                             </div>
                         </div>
@@ -299,7 +275,7 @@
 
                             <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 class="display-5 fw-bold anim">This Portfolio Website</h3>
+                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">This Portfolio Website</h3>
                                 <div class="col-lg-6 mx-auto anim">
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">Django</span>
@@ -317,7 +293,7 @@
 
                             <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 class="display-5 fw-bold anim">Face Detection</h3>
+                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Face Detection</h3>
                                 <div class="col-lg-6 mx-auto anim">
 
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
@@ -326,7 +302,7 @@
                                         <span class="badge rounded-pill bg-light text-black">Casscade Models</span>
                                     </div>
                                 </div>
-                                <a target="_blank" href="https://github.com/bedead/FACE-DETECTOR"><button type="button" class="text-black btn mb-1 px-3 glow-on-hover">Show Project</button></a>
+                                <a target="_blank" href="https://github.com/bedead/FACE-DETECTOR"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
 
                             </div>
                         </div>
@@ -337,7 +313,7 @@
 
                             <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 class="display-5 fw-bold anim">Hi Software</h3>
+                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Hi Software</h3>
                                 <div class="col-lg-6 mx-auto v">
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">SpeechRecognition</span>
@@ -345,7 +321,7 @@
                                         <span class="badge rounded-pill bg-light text-black">More libraries</span>
                                     </div>
                                 </div>
-                                <a target="_blank" href="https://github.com/bedead/HI_2021.12.22.4"><button type="button" class="text-black btn mb-1 px-3 glow-on-hover">Show Project</button></a>
+                                <a target="_blank" href="https://github.com/bedead/HI_2021.12.22.4"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
                             </div>
                         </div>
                     </div>
@@ -361,38 +337,23 @@
 
 
         <!-- Remove the container if you want to extend the Footer to full width. -->
-        <section id="footer" class="container-fluid mt-0 reveal fade-right" style="background-color: #FFF8F3;">
+        <section id="footer" class="container-fluid mt-0 reveal fade-right" >
 
             <footer class="text-center text-lg-start mt-0 pt-4">
                 <!-- Grid container -->
                 <div class="container p-4">
-                    <!--Grid row-->
-                    <div class="row">
-                        <!--Grid column-->
-                        <div class="social-buttons text-center col-md-4 col-lg-12 col-xl-12 mx-auto mt-0 mb-2">
-                            <h4 style="color: #00006fff;" class="text-uppercase mb-4 font-weight-bold anim">Social Links</h4>
-                            <a target="_blank" style="color: #00006fff;" alt="linkedin link" href="https://www.linkedin.com/in/satyam-mishra-019bab225"><i class="fa fa-linkedin"></i></a>
-                            <a target="_blank" style="color: #00006fff;" alt="github link" href="https://github.com/bedead"><i class="fa fa-github"></i></a>
-                            <a target="_blank" style="color: #00006fff;" alt="mail link" href="mailto:satyam.work.only@gmail.com"><i class="fa fa-google"></i></a>
-                        </div>
-                        <hr>
-                        <div class="col-lg-12 col-md-4 mb-0 mb-lg-0 mt-lg-0 mt-sm-2 mt-md-2">
-                            <h2 style="color: #00006fff;" class="text-center anim">My Location</h2>
-                            <div class="cols mt-lg-5 mt-sm-2 mt-md-1">
-                                <div id="map-container-google-3 mt-sm-5" class="z-depth-1-half map-container-3">
-                                    <iframe title="My location" src="https://maps.google.com/maps?q=KSR+GREEN+VALLEY&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="social-buttons text-center mx-auto mt-0 mb-2">
+                        <h4 style="color: var(--JEWEL);" class="text-uppercase mb-4 font-weight-bold anim">Social Links</h4>
+                        <a target="_blank" style="color: #00006fff;" alt="linkedin link" href="https://www.linkedin.com/in/satyam-mishra-019bab225"><i class="fa fa-linkedin"></i></a>
+                        <a target="_blank" style="color: #00006fff;" alt="github link" href="https://github.com/bedead"><i class="fa fa-github"></i></a>
+                        <a target="_blank" style="color: #00006fff;" alt="mail link" href="mailto:satyam.work.only@gmail.com"><i class="fa fa-google"></i></a>
                     </div>
-                    <!--Grid row-->
-                </div>
                 <!-- Grid container -->
-
+                </div>
                 <!-- Copyright -->
-                <div style="color: #00006fff;" class="text-center p-3">
+                <div style="color: var(--STRAK);" class="text-center p-3">
                     © 2020 Copyright:
-                    <a style="color: #00006fff;" class="" href="/">Satyam Mishra</a>
+                    <a style="color: var(--FUSCHIA);" class="" href="/">Satyam Mishra</a>
                 </div>
                 <!-- Copyright -->
             </footer>
@@ -416,42 +377,6 @@
 
 </body>
 <script>
-    // code for dark-light mode toggler
-
-    /*let nav_child = document.querySelectorAll('.nav-text');
-    var heroimage = document.getElementById("heroimage");
-    var about = document.getElementById("About");
-    var projects = document.getElementById("projects");
-    var footer = document.getElementById("footer");
-
-    function change_mode() {
-        if (document.getElementById("light-btn").className == "btn btn-outline-light active") {
-            heroimage.style.backgroundColor = "#060930";
-            about.style.backgroundColor = "#333456";
-            projects.style.backgroundColor = "#060930";
-            footer.style.backgroundColor = "#333456";
-            document.getElementById("light-btn").className = "btn btn-outline-light";
-            document.getElementById("dark-btn").className = "btn btn-outline-dark active";
-            nav_child.forEach(child => {
-                child.style.color = "white";
-                child.classList.remove("hover-nav-color");
-                child.classList.add("hover-nav-color-dark");
-            })
-        } else {
-            heroimage.style.backgroundColor = "#EEEEEE";
-            about.style.backgroundColor = "#FFF8F3";
-            projects.style.backgroundColor = "#EEEEEE";
-            footer.style.backgroundColor = "#FFF8F3";
-            document.getElementById("light-btn").className = "btn btn-outline-light active";
-            document.getElementById("dark-btn").className = "btn btn-outline-dark";
-            nav_child.forEach(child => {
-                child.style.color = "#00006fff";
-                child.classList.remove("hover-nav-color-dark");
-                child.classList.add("hover-nav-color");
-            })
-        }
-    }*/
-
     var myVar;
     // screenloader code for website
     function ScreenLoader() {

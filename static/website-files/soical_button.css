@@ -18,7 +18,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background: linear-gradient(45deg, #00C0FF, #4218B8);
+    background: linear-gradient(45deg, var(--FUSCHIA), var(--JEWEL));
     border-radius: 50%;
     z-index: -1;
     transition: 0.3s ease-in;
@@ -33,7 +33,7 @@
 }
 
 .social-buttons a:hover i {
-    background: linear-gradient(45deg, #222126, #222126);
+    background: var(--STRAK);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
