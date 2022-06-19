@@ -50,21 +50,6 @@
         display: none;
         opacity: 0;
     }
-    
-    .map-container-3 {
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        position: relative;
-        height: 0;
-    }
-    
-    .map-container-3 iframe {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-    }
     .card{
         border-radius: 25px;
         border: none;
@@ -76,10 +61,7 @@
         -o-transform: scale(1.09);
         transform: scale(1.09);
     }
-    .btn{
-        border-radius: 30px;
-        border: none;
-    }
+
 </style>
 
 <body onload="ScreenLoader()" data-spy="scroll" data-target="#fixed-nav" data-bs-offset="50" style="position: relative; background-color:#0E0B16;">
@@ -124,13 +106,10 @@
 
 
         <section id="heroimage" class="pt-sm-5 pb-sm-5 container-fluid mt-0 mb-0" style="background-image:url('/static/universal-elements/satyam-vector-2.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100%;">
-            <br>
-            <br>
-            <br>
             <div class="container-fluid p-5 pb-md-4 pb-sm-5 pt-sm-5" style="text-align: center; top: 50%; left: 50%;">
                 <div class="p-lg-5 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                    <div class="p-lg-0 p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
-                        <h5 style="color: var(--FUSCHIA)" class="display-5 pt-3 pt-lg-0 pb-3 pb-lg-0 pb-md-0">I am a <strong style="color: var(--JEWEL);">Developer | Programmer</strong></h5>
+                    <div class=" p-md-4 pt-sm-5 pb-sm-5 mt-5 mb-5" style="background-color: transparent; border:none;">
+                        <h5 style="color: var(--JEWEL);padding: 50px 0px 50px 0px;" class="display-4 pt-3 pt-lg-0 pb-3 pb-lg-0 pb-md-0 underline">I am a<br><strong style="color: var(--FUSCHIA);">Developer|Programmer</strong></h5>
                     </div>
                 </div>
             </div>
@@ -405,7 +384,6 @@
     function showPage() {
         document.getElementById("loader-wrapper").style.display = "none";
         document.getElementById("content").style.display = "block";
-        nameTypeWriter();
     }
 
     document.getElementById("content").onload = fadeIn();
@@ -483,9 +461,9 @@
 
     reveal();
     //
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
-
 </html>
 
 </html>
