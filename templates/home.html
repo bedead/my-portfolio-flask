@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/static/website-files/float-anim.css">
     <!--GLOWING BUTTON-->
     <link rel="stylesheet" href="/static/website-files/button-glow.css">
+    <link rel="stylesheet" href="/static/website-files/anim-bg.css">
     <title>Satyam Mishra</title>
 </head>
 
@@ -38,7 +39,9 @@
         --JEWEL: #4717F6;
         --STRAK:#E7DFDD;
     }
-    
+    p,span{
+        color: var(--STRAK);
+    }
     body {
         font-family: 'Fira Code', monospace;
     }
@@ -62,6 +65,10 @@
         width: 100%;
         position: absolute;
     }
+    .card{
+        border-radius: 25px;
+        border: none;
+    }
     .card:hover{
         -ms-transform: scale(1.09);
         -moz-transform: scale(1.09);
@@ -69,9 +76,27 @@
         -o-transform: scale(1.09);
         transform: scale(1.09);
     }
+    .btn{
+        border-radius: 30px;
+        border: none;
+    }
 </style>
 
 <body onload="ScreenLoader()" data-spy="scroll" data-target="#fixed-nav" data-bs-offset="50" style="position: relative; background-color:#0E0B16;">
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
     <div id="content" class="container p-0">
         <header class="header fixed-top">
             <!-- Logo --> 
@@ -120,7 +145,7 @@
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-lg-5 py-3">
                 <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-work-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark" style="background-image: url('/static/universal-elements/about-work-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-lg-4 p-5 pb-3 text-white text-shadow-1">
                             <h2 style="color: var(--JEWEL);" class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Eduction & Work</h2>
                             <p class="lead mb-2 anim">B.TECH <strong>(Computer Science in AI and ML)  from VIT AP</strong></p>
@@ -132,7 +157,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-Interests-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark" style="background-image: url('/static/universal-elements/about-Interests-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-lg-4 p-5 pb-3 text-white text-shadow-1">
                             <h2 style="color: var(--JEWEL);" class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Interests</h2>
                             <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
@@ -154,7 +179,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/about-skills-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark" style="background-image: url('/static/universal-elements/about-skills-bg-image.webp'); position: relative; background-repeat: no-repeat; background-size: cover;">
                         <div class="d-flex flex-column h-100 p-lg-4 p-5 pb-3 text-white text-shadow-1">
                             <h2 style="color: var(--JEWEL);" class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold anim">Skills</h2>
                             <div class="gap-2d-sm-flex justify-content-center mb-4 anim">
@@ -195,17 +220,15 @@
 
 
 
-        <section id="projects" class="container-fluid px-4 py-5 mb-0 reveal fade-left" );
-    background-size: cover;background-repeat: no-repeat;">
+        <section id="projects" class="container-fluid px-4  mb-0 reveal fade-left">
             <div class="container p-2">
                 <h1 style="color: var(--JEWEL);text-align: center;text-decoration: underline;" class="display-5 fw-bold shake-anim">Current projects</h1>
 
                 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
                     <div class="col anim">
-
-                        <div class="card card-cover h-100 overflow-hidden text-white rounded-3" style="background-image: linear-gradient(to bottom right, #00006fff, #8278DA);box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);">
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Simple Web Browser</h3>
+                        <div class="card card-cover h-100 overflow-hidden text-white" style="background-image: linear-gradient(to bottom right, var(--FUSCHIA), var(--JEWEL));">
+                            <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+                                <h3 style="color: var(--STRAK);" class="display-5 fw-bold anim">Simple Web Browser</h3>
                                 <div class="col-lg-6 mx-auto anim">
                                     <!-- text can be added here-->
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
@@ -216,32 +239,30 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col anim">
-                        <div class="card card-cover h-100 overflow-hidden text-white rounded-3" style="background-image: linear-gradient(to bottom right, #00006fff, #8278DA);box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);">
-
-
-                            <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url(' /static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Shape out - Game</h3>
+                        <div class="card card-cover h-100 overflow-hidden text-white" style="background-image: linear-gradient(to bottom right, var(--FUSCHIA), var(--JEWEL));">
+                            <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+                                <h3 style="color: var(--STRAK);" class="display-5 fw-bold anim">Shape out - Game</h3>
                                 <div class="col-lg-6 mx-auto anim">
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">Godot Engine</span>
                                         <span class="badge rounded-pill bg-light text-black">Gd-Script</span>
                                     </div>
                                 </div>
-                                <a target="_blank" href="https://www.amazon.com/Bedead-Shape-Out-2d-platformer/dp/B0999LHBYN/ref=sr_1_1?qid=1648120404&refinements=p_4%3ABedead&s=mobile-apps&search-type=ss&sr=1-1"><button type="button" class="btn glow-on-hover mb-1 px-3">Show Project</button></a>
-
+                                <br>
+                                <a style="text-align: center;" target="_blank" href="https://www.amazon.com/Bedead-Shape-Out-2d-platformer/dp/B0999LHBYN/ref=sr_1_1?qid=1648120404&refinements=p_4%3ABedead&s=mobile-apps&search-type=ss&sr=1-1"><button type="button" class="btn glow-on-hover mb-1">Show Project</button></a>
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col anim">
-                        <div class="card card-cover h-100 overflow-hidden text-white rounded-3" style="background-image: linear-gradient(to bottom right, #00006fff, #8278DA);box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);">
-
-                            <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Simple Calculator</h3>
+                        <div class="card card-cover h-100 overflow-hidden text-white" style="background-image: linear-gradient(to bottom right, var(--FUSCHIA), var(--JEWEL));">
+                            <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+                                <h3 style="color: var(--STRAK);" class="display-5 fw-bold anim">Simple Calculator</h3>
                                 <div class="col-lg-6 mx-auto anim">
-
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">Kivy</span>
                                         <span class="badge rounded-pill bg-light text-black">Kivymd</span>
@@ -251,12 +272,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col anim">
-                        <div class="card card-cover h-100 overflow-hidden text-white rounded-3" style="background-image: linear-gradient(to bottom right, #00006fff, #8278DA);box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);">
+                    
 
-                            <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Translation App</h3>
+                    <div class="col anim">
+                        <div class="card card-cover h-100 overflow-hidden text-white" style="background-image: linear-gradient(to bottom right, var(--FUSCHIA), var(--JEWEL));">
+                            <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+                                <h3 style="color: var(--STRAK);" class="display-5 fw-bold anim">Translation App</h3>
                                 <div class="col-lg-6 mx-auto anim">
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">Kivymd</span>
@@ -265,17 +286,17 @@
                                         <span class="badge rounded-pill bg-light text-black">Python</span>
                                     </div>
                                 </div>
-                                <a target="_blank" href="https://github.com/bedead/kivymd-language-translation-app"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
-
+                                <br>
+                                <a style="text-align: center;" target="_blank" href="https://github.com/bedead/kivymd-language-translation-app"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col anim">
-                        <div class="card card-cover h-100 overflow-hidden text-white rounded-3" style="background-image: linear-gradient(to bottom right, #00006fff, #8278DA);box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);">
 
-                            <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">This Portfolio Website</h3>
+
+                    <div class="col anim">
+                        <div class="card card-cover h-100 overflow-hidden text-white" style="background-image: linear-gradient(to bottom right, var(--FUSCHIA), var(--JEWEL));">
+                            <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+                                <h3 style="color: var(--STRAK);" class="display-5 fw-bold anim">This Portfolio Website</h3>
                                 <div class="col-lg-6 mx-auto anim">
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">Django</span>
@@ -287,33 +308,30 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col anim">
-                        <div class="card card-cover h-100 overflow-hidden text-white rounded-3" style="background-image: linear-gradient(to bottom right, #00006fff, #8278DA);box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);">
-
-
-                            <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Face Detection</h3>
+                        <div class="card card-cover h-100 overflow-hidden text-white" style="background-image: linear-gradient(to bottom right, var(--FUSCHIA), var(--JEWEL));">
+                            <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+                                <h3 style="color: var(--STRAK);" class="display-5 fw-bold anim">Face Detection</h3>
                                 <div class="col-lg-6 mx-auto anim">
-
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">OpenCV</span>
                                         <span class="badge rounded-pill bg-light text-black">Python</span>
                                         <span class="badge rounded-pill bg-light text-black">Casscade Models</span>
                                     </div>
                                 </div>
-                                <a target="_blank" href="https://github.com/bedead/FACE-DETECTOR"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
-
+                                <br>
+                                <a style="text-align: center;" target="_blank" href="https://github.com/bedead/FACE-DETECTOR"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col anim">
-                        <div class="card card-cover h-100 overflow-hidden text-white rounded-3" style="background-image: linear-gradient(to bottom right, #00006fff, #8278DA);box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 20px 20px 0 rgba(0,0,0,0.19);">
-
-
-                            <!-- <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-3 shadow-lg" style="background-image: url('/static/universal-elements/projects-card-bg.jfif'); position: relative; background-repeat: no-repeat; background-size: cover;"> -->
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h3 style="color: var(--JEWEL);" class="display-5 fw-bold anim">Hi Software</h3>
+                        <div class="card card-cover h-100 overflow-hidden text-white" style="background-image: linear-gradient(to bottom right, var(--FUSCHIA), var(--JEWEL));">
+                            <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+                                <h3 style="color: var(--STRAK);" class="display-5 fw-bold anim">Hi Software</h3>
                                 <div class="col-lg-6 mx-auto v">
                                     <div class="gap-2 d-sm-flex justify-content-center mb-2">
                                         <span class="badge rounded-pill bg-light text-black">SpeechRecognition</span>
@@ -321,7 +339,8 @@
                                         <span class="badge rounded-pill bg-light text-black">More libraries</span>
                                     </div>
                                 </div>
-                                <a target="_blank" href="https://github.com/bedead/HI_2021.12.22.4"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
+                                <br>
+                                <a style="text-align: center;" target="_blank" href="https://github.com/bedead/HI_2021.12.22.4"><button type="button" class="btn mb-1 px-3 glow-on-hover">Show Project</button></a>
                             </div>
                         </div>
                     </div>
