@@ -160,3 +160,8 @@ ul {
         display: none;
     }
 }
+@media (max-width: 355px) {
+    .hamb{
+        float: none;
+    }
+}
