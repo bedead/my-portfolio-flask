@@ -160,8 +160,11 @@ ul {
         display: none;
     }
 }
-@media (max-width: 355px) {
+@media (max-width: 360px) {
     .hamb{
-        float: none;
+        float: left;
+    }
+    .logo{
+        font-size: 35px;
     }
 }
